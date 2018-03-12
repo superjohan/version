@@ -106,6 +106,12 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.startButton.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        self.audioPlayer.stop()
+    }
+    
     // MARK: - SCNSceneRendererDelegate
 
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
