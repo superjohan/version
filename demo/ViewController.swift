@@ -89,6 +89,11 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.sceneView.scene = createScene()
     }
 
+    let testView1 = UIView()
+    let testView2 = UIView()
+    let testView3 = UIView()
+    let testView4 = UIView()
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -104,6 +109,26 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.sceneView.isHidden = true
 
         self.startButton.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
+        
+        self.view.addSubview(self.testView1)
+        self.view.addSubview(self.testView2)
+        self.view.addSubview(self.testView3)
+        self.view.addSubview(self.testView4)
+        
+        self.testView1.frame = self.view.bounds
+        self.testView2.frame = self.view.bounds
+        self.testView3.frame = self.view.bounds
+        self.testView4.frame = self.view.bounds
+        
+        self.testView1.backgroundColor = .red
+        self.testView2.backgroundColor = .green
+        self.testView3.backgroundColor = .blue
+        self.testView4.backgroundColor = .yellow
+
+        self.testView1.isHidden = true
+        self.testView2.isHidden = true
+        self.testView3.isHidden = true
+        self.testView4.isHidden = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -138,6 +163,79 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.sceneView.isHidden = false
         
         self.audioPlayer.play()
+        
+        scheduleEvents()
+    }
+    
+    fileprivate func scheduleEvents() {
+        let beatLength = 60.0 / 130.0
+        let barLength = beatLength * 4.0
+        
+        func scheduleBeatEvents(position: Double) {
+            perform(#selector(showFirstBeatState), with: nil, afterDelay: position)
+            perform(#selector(showSecondBeatState), with: nil, afterDelay: position + beatLength)
+            perform(#selector(showThirdBeatState), with: nil, afterDelay: position + (beatLength * 2.0))
+        }
+        
+        for i in 0..<37 {
+            let position = Double(i) * barLength;
+            
+            if i >= 0 && i < 16 {
+                scheduleBeatEvents(position: position)
+            }
+            
+            if i == 16 {
+                perform(#selector(showMiddleState), with: nil, afterDelay: position)
+            }
+            
+            if i >= 20 && i < 36 {
+                scheduleBeatEvents(position: position)
+            }
+            
+            if i == 36 {
+                perform(#selector(endItAll), with: nil, afterDelay: position)
+            }
+        }
+    }
+    
+    @objc
+    fileprivate func showFirstBeatState() {
+        self.testView1.isHidden = false
+        self.testView2.isHidden = true
+        self.testView3.isHidden = true
+        self.testView4.isHidden = true
+    }
+    
+    @objc
+    fileprivate func showSecondBeatState() {
+        self.testView1.isHidden = true
+        self.testView2.isHidden = false
+        self.testView3.isHidden = true
+        self.testView4.isHidden = true
+    }
+    
+    @objc
+    fileprivate func showThirdBeatState() {
+        self.testView1.isHidden = true
+        self.testView2.isHidden = true
+        self.testView3.isHidden = false
+        self.testView4.isHidden = true
+    }
+    
+    @objc
+    fileprivate func showMiddleState() {
+        self.testView1.isHidden = true
+        self.testView2.isHidden = true
+        self.testView3.isHidden = true
+        self.testView4.isHidden = false
+    }
+    
+    @objc
+    fileprivate func endItAll() {
+        self.testView1.isHidden = true
+        self.testView2.isHidden = true
+        self.testView3.isHidden = true
+        self.testView4.isHidden = true
     }
     
     fileprivate func createScene() -> SCNScene {
