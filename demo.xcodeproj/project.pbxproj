@@ -44,6 +44,7 @@
 		90FAEF17205D562500C4BCD1 /* BrandViewLateqniq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF16205D562500C4BCD1 /* BrandViewLateqniq.swift */; };
 		90FAEF19205D562E00C4BCD1 /* BrandViewMurtelio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF18205D562E00C4BCD1 /* BrandViewMurtelio.swift */; };
 		90FAEF1B205D563E00C4BCD1 /* BrandViewWebtraks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF1A205D563E00C4BCD1 /* BrandViewWebtraks.swift */; };
+		90FAEF1D205D65FE00C4BCD1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF1C205D65FE00C4BCD1 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		90FAEF16205D562500C4BCD1 /* BrandViewLateqniq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewLateqniq.swift; sourceTree = "<group>"; };
 		90FAEF18205D562E00C4BCD1 /* BrandViewMurtelio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewMurtelio.swift; sourceTree = "<group>"; };
 		90FAEF1A205D563E00C4BCD1 /* BrandViewWebtraks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewWebtraks.swift; sourceTree = "<group>"; };
+		90FAEF1C205D65FE00C4BCD1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				9042B7262056F88C000DB49A /* ViewController.swift */,
 				90D241C1205D4ED40086B982 /* BrandView.swift */,
 				90D241C3205D4F200086B982 /* BrandViewContainerView.swift */,
+				90FAEF1C205D65FE00C4BCD1 /* Constants.swift */,
 				9042B72B2056F88C000DB49A /* Assets.xcassets */,
 				9042B72D2056F88C000DB49A /* LaunchScreen.storyboard */,
 				9042B7302056F88C000DB49A /* Info.plist */,
@@ -390,6 +393,7 @@
 				90FAEF00205D55B000C4BCD1 /* BrandViewBrentax.swift in Sources */,
 				90FAEEFE205D55A100C4BCD1 /* BrandViewAntiflex.swift in Sources */,
 				90FAEF19205D562E00C4BCD1 /* BrandViewMurtelio.swift in Sources */,
+				90FAEF1D205D65FE00C4BCD1 /* Constants.swift in Sources */,
 				90FAEF15205D561B00C4BCD1 /* BrandViewKreaten.swift in Sources */,
 				90FAEF17205D562500C4BCD1 /* BrandViewLateqniq.swift in Sources */,
 				90D241C4205D4F200086B982 /* BrandViewContainerView.swift in Sources */,

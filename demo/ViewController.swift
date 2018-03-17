@@ -169,8 +169,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     }
     
     fileprivate func scheduleEvents() {
-        let beatLength = 60.0 / 130.0
-        let barLength = beatLength * 4.0
+        let beatLength = Constants.beatLength
+        let barLength = Constants.barLength
         
         func scheduleBeatEvents(position: Double) {
             perform(#selector(showFirstBeatState), with: nil, afterDelay: position)
