@@ -33,7 +33,8 @@ class BrandViewContainerView: UIView {
         self.addSubview(BrandViewMurtelio(frame: self.frame))
         self.addSubview(BrandViewPreolio(frame: self.frame))
         self.addSubview(BrandViewWebtraks(frame: self.frame))
-        
+        self.addSubview(BrandViewYamageruto(frame: self.frame))
+
         for view in self.subviews {
             view.isHidden = true
         }

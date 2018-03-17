@@ -47,6 +47,8 @@
 		90FAEF1D205D65FE00C4BCD1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF1C205D65FE00C4BCD1 /* Constants.swift */; };
 		90FAEF20205D6CC500C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEF1F205D6CC500C4BCD1 /* Media.xcassets */; };
 		90FAEF22205D6CD600C4BCD1 /* BrandViewPreolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF21205D6CD600C4BCD1 /* BrandViewPreolio.swift */; };
+		90FAEF25205D716800C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEF24205D716800C4BCD1 /* Media.xcassets */; };
+		90FAEF27205D717500C4BCD1 /* BrandViewYamageruto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF26205D717500C4BCD1 /* BrandViewYamageruto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		90FAEF1C205D65FE00C4BCD1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		90FAEF1F205D6CC500C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		90FAEF21205D6CD600C4BCD1 /* BrandViewPreolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewPreolio.swift; sourceTree = "<group>"; };
+		90FAEF24205D716800C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90FAEF26205D717500C4BCD1 /* BrandViewYamageruto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewYamageruto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,7 @@
 				90FAEEDD205D537E00C4BCD1 /* murtelio */,
 				90FAEF1E205D6CB700C4BCD1 /* preolio */,
 				90FAEEDE205D538700C4BCD1 /* webtraks */,
+				90FAEF23205D715C00C4BCD1 /* yamageruto */,
 			);
 			path = brands;
 			sourceTree = "<group>";
@@ -305,6 +310,15 @@
 			path = preolio;
 			sourceTree = "<group>";
 		};
+		90FAEF23205D715C00C4BCD1 /* yamageruto */ = {
+			isa = PBXGroup;
+			children = (
+				90FAEF24205D716800C4BCD1 /* Media.xcassets */,
+				90FAEF26205D717500C4BCD1 /* BrandViewYamageruto.swift */,
+			);
+			path = yamageruto;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,6 +388,7 @@
 				90FAEF20205D6CC500C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEE6205D53D300C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEEE205D53EA00C4BCD1 /* Media.xcassets in Resources */,
+				90FAEF25205D716800C4BCD1 /* Media.xcassets in Resources */,
 				90D241C0205D42690086B982 /* audio.mp3 in Resources */,
 				90FAEEE0205D53B900C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEF8205D540E00C4BCD1 /* Media.xcassets in Resources */,
@@ -403,6 +418,7 @@
 				9042B7252056F88C000DB49A /* AppDelegate.swift in Sources */,
 				90FAEF10205D560400C4BCD1 /* BrandViewIodyne.swift in Sources */,
 				90FAEF0C205D55F400C4BCD1 /* BrandViewGiontas.swift in Sources */,
+				90FAEF27205D717500C4BCD1 /* BrandViewYamageruto.swift in Sources */,
 				90FAEF1B205D563E00C4BCD1 /* BrandViewWebtraks.swift in Sources */,
 				90FAEF0E205D55FD00C4BCD1 /* BrandViewHaemo.swift in Sources */,
 				90FAEF00205D55B000C4BCD1 /* BrandViewBrentax.swift in Sources */,
