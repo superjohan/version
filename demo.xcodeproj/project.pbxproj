@@ -45,6 +45,8 @@
 		90FAEF19205D562E00C4BCD1 /* BrandViewMurtelio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF18205D562E00C4BCD1 /* BrandViewMurtelio.swift */; };
 		90FAEF1B205D563E00C4BCD1 /* BrandViewWebtraks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF1A205D563E00C4BCD1 /* BrandViewWebtraks.swift */; };
 		90FAEF1D205D65FE00C4BCD1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF1C205D65FE00C4BCD1 /* Constants.swift */; };
+		90FAEF20205D6CC500C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEF1F205D6CC500C4BCD1 /* Media.xcassets */; };
+		90FAEF22205D6CD600C4BCD1 /* BrandViewPreolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF21205D6CD600C4BCD1 /* BrandViewPreolio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		90FAEF18205D562E00C4BCD1 /* BrandViewMurtelio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewMurtelio.swift; sourceTree = "<group>"; };
 		90FAEF1A205D563E00C4BCD1 /* BrandViewWebtraks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewWebtraks.swift; sourceTree = "<group>"; };
 		90FAEF1C205D65FE00C4BCD1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		90FAEF1F205D6CC500C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90FAEF21205D6CD600C4BCD1 /* BrandViewPreolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewPreolio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 				90FAEEDB205D537200C4BCD1 /* kreaten */,
 				90FAEEDC205D537700C4BCD1 /* lateqniq */,
 				90FAEEDD205D537E00C4BCD1 /* murtelio */,
+				90FAEF1E205D6CB700C4BCD1 /* preolio */,
 				90FAEEDE205D538700C4BCD1 /* webtraks */,
 			);
 			path = brands;
@@ -291,6 +296,15 @@
 			path = webtraks;
 			sourceTree = "<group>";
 		};
+		90FAEF1E205D6CB700C4BCD1 /* preolio */ = {
+			isa = PBXGroup;
+			children = (
+				90FAEF1F205D6CC500C4BCD1 /* Media.xcassets */,
+				90FAEF21205D6CD600C4BCD1 /* BrandViewPreolio.swift */,
+			);
+			path = preolio;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,6 +371,7 @@
 				90FAEEF2205D53FD00C4BCD1 /* Media.xcassets in Resources */,
 				9042B72F2056F88C000DB49A /* LaunchScreen.storyboard in Resources */,
 				90FAEEE8205D53D800C4BCD1 /* Media.xcassets in Resources */,
+				90FAEF20205D6CC500C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEE6205D53D300C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEEE205D53EA00C4BCD1 /* Media.xcassets in Resources */,
 				90D241C0205D42690086B982 /* audio.mp3 in Resources */,
@@ -396,6 +411,7 @@
 				90FAEF1D205D65FE00C4BCD1 /* Constants.swift in Sources */,
 				90FAEF15205D561B00C4BCD1 /* BrandViewKreaten.swift in Sources */,
 				90FAEF17205D562500C4BCD1 /* BrandViewLateqniq.swift in Sources */,
+				90FAEF22205D6CD600C4BCD1 /* BrandViewPreolio.swift in Sources */,
 				90D241C4205D4F200086B982 /* BrandViewContainerView.swift in Sources */,
 				90FAEF12205D560C00C4BCD1 /* BrandViewJoolenta.swift in Sources */,
 			);
