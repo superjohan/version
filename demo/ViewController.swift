@@ -41,12 +41,12 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.camera.camera = camera // lol
         
         let startButtonText =
-            "\"some demo\"\n" +
+            "\"version\"\n" +
                 "by dekadence\n" +
                 "\n" +
-                "programming and music by ricky martin\n" +
+                "programming, music, and graphics by ricky martin\n" +
                 "\n" +
-                "presented at some party 2018\n" +
+                "presented at revision 2018\n" +
                 "\n" +
         "tap anywhere to start"
         self.startButton = UIButton.init(type: UIButtonType.custom)
