@@ -18,6 +18,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     let startButton: UIButton
     let qtFoolingBgView: UIView = UIView.init(frame: CGRect.zero)
 
+    let brandViewContainer = BrandViewContainerView(frame: .zero)
+    
     // MARK: - UIViewController
     
     init() {
@@ -69,7 +71,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.view.addSubview(self.qtFoolingBgView)
         
         self.view.addSubview(self.sceneView)
-
+        self.view.addSubview(self.brandViewContainer)
+        
         self.view.addSubview(self.startButton)
     }
     
@@ -91,7 +94,6 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
 
     let testView1 = UIView()
     let testView2 = UIView()
-    let testView3 = UIView()
     let testView4 = UIView()
 
     override func viewWillAppear(_ animated: Bool) {
@@ -108,26 +110,25 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.sceneView.isPlaying = true
         self.sceneView.isHidden = true
 
+        self.brandViewContainer.frame = self.view.bounds
+        self.brandViewContainer.isHidden = true
+        
         self.startButton.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
         
         self.view.addSubview(self.testView1)
         self.view.addSubview(self.testView2)
-        self.view.addSubview(self.testView3)
         self.view.addSubview(self.testView4)
         
         self.testView1.frame = self.view.bounds
         self.testView2.frame = self.view.bounds
-        self.testView3.frame = self.view.bounds
         self.testView4.frame = self.view.bounds
         
         self.testView1.backgroundColor = .red
         self.testView2.backgroundColor = .green
-        self.testView3.backgroundColor = .blue
         self.testView4.backgroundColor = .yellow
 
         self.testView1.isHidden = true
         self.testView2.isHidden = true
-        self.testView3.isHidden = true
         self.testView4.isHidden = true
     }
     
@@ -202,7 +203,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     fileprivate func showFirstBeatState() {
         self.testView1.isHidden = false
         self.testView2.isHidden = true
-        self.testView3.isHidden = true
+        self.brandViewContainer.isHidden = true
         self.testView4.isHidden = true
     }
     
@@ -210,7 +211,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     fileprivate func showSecondBeatState() {
         self.testView1.isHidden = true
         self.testView2.isHidden = false
-        self.testView3.isHidden = true
+        self.brandViewContainer.isHidden = true
         self.testView4.isHidden = true
     }
     
@@ -218,15 +219,17 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     fileprivate func showThirdBeatState() {
         self.testView1.isHidden = true
         self.testView2.isHidden = true
-        self.testView3.isHidden = false
+        self.brandViewContainer.isHidden = false
         self.testView4.isHidden = true
+
+        self.brandViewContainer.showBrand(Int(arc4random_uniform(15)), animated: false)
     }
     
     @objc
     fileprivate func showMiddleState() {
         self.testView1.isHidden = true
         self.testView2.isHidden = true
-        self.testView3.isHidden = true
+        self.brandViewContainer.isHidden = true
         self.testView4.isHidden = false
     }
     
@@ -234,7 +237,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     fileprivate func endItAll() {
         self.testView1.isHidden = true
         self.testView2.isHidden = true
-        self.testView3.isHidden = true
+        self.brandViewContainer.isHidden = true
         self.testView4.isHidden = true
     }
     

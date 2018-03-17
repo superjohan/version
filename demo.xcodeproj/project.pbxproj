@@ -12,6 +12,8 @@
 		9042B72C2056F88C000DB49A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9042B72B2056F88C000DB49A /* Assets.xcassets */; };
 		9042B72F2056F88C000DB49A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9042B72D2056F88C000DB49A /* LaunchScreen.storyboard */; };
 		90D241C0205D42690086B982 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90D241BF205D42690086B982 /* audio.mp3 */; };
+		90D241C2205D4ED40086B982 /* BrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D241C1205D4ED40086B982 /* BrandView.swift */; };
+		90D241C4205D4F200086B982 /* BrandViewContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D241C3205D4F200086B982 /* BrandViewContainerView.swift */; };
 		90FAEEE0205D53B900C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEEDF205D53B900C4BCD1 /* Media.xcassets */; };
 		90FAEEE2205D53C600C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEEE1205D53C600C4BCD1 /* Media.xcassets */; };
 		90FAEEE4205D53CC00C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEEE3205D53CC00C4BCD1 /* Media.xcassets */; };
@@ -27,6 +29,21 @@
 		90FAEEF8205D540E00C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEEF7205D540E00C4BCD1 /* Media.xcassets */; };
 		90FAEEFA205D541300C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEEF9205D541300C4BCD1 /* Media.xcassets */; };
 		90FAEEFC205D541800C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEEFB205D541800C4BCD1 /* Media.xcassets */; };
+		90FAEEFE205D55A100C4BCD1 /* BrandViewAntiflex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEEFD205D55A100C4BCD1 /* BrandViewAntiflex.swift */; };
+		90FAEF00205D55B000C4BCD1 /* BrandViewBrentax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEEFF205D55B000C4BCD1 /* BrandViewBrentax.swift */; };
+		90FAEF02205D55BC00C4BCD1 /* BrandViewCromteq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF01205D55BC00C4BCD1 /* BrandViewCromteq.swift */; };
+		90FAEF04205D55C500C4BCD1 /* BrandViewDistando.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF03205D55C500C4BCD1 /* BrandViewDistando.swift */; };
+		90FAEF06205D55D100C4BCD1 /* BrandViewEftua.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF05205D55D100C4BCD1 /* BrandViewEftua.swift */; };
+		90FAEF08205D55DA00C4BCD1 /* BrandViewFantisol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF07205D55DA00C4BCD1 /* BrandViewFantisol.swift */; };
+		90FAEF0A205D55EA00C4BCD1 /* BrandViewFreemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF09205D55EA00C4BCD1 /* BrandViewFreemo.swift */; };
+		90FAEF0C205D55F400C4BCD1 /* BrandViewGiontas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF0B205D55F400C4BCD1 /* BrandViewGiontas.swift */; };
+		90FAEF0E205D55FD00C4BCD1 /* BrandViewHaemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF0D205D55FD00C4BCD1 /* BrandViewHaemo.swift */; };
+		90FAEF10205D560400C4BCD1 /* BrandViewIodyne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF0F205D560400C4BCD1 /* BrandViewIodyne.swift */; };
+		90FAEF12205D560C00C4BCD1 /* BrandViewJoolenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF11205D560C00C4BCD1 /* BrandViewJoolenta.swift */; };
+		90FAEF15205D561B00C4BCD1 /* BrandViewKreaten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF14205D561B00C4BCD1 /* BrandViewKreaten.swift */; };
+		90FAEF17205D562500C4BCD1 /* BrandViewLateqniq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF16205D562500C4BCD1 /* BrandViewLateqniq.swift */; };
+		90FAEF19205D562E00C4BCD1 /* BrandViewMurtelio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF18205D562E00C4BCD1 /* BrandViewMurtelio.swift */; };
+		90FAEF1B205D563E00C4BCD1 /* BrandViewWebtraks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF1A205D563E00C4BCD1 /* BrandViewWebtraks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +54,8 @@
 		9042B72E2056F88C000DB49A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9042B7302056F88C000DB49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90D241BF205D42690086B982 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
+		90D241C1205D4ED40086B982 /* BrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandView.swift; sourceTree = "<group>"; };
+		90D241C3205D4F200086B982 /* BrandViewContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewContainerView.swift; sourceTree = "<group>"; };
 		90FAEEDF205D53B900C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		90FAEEE1205D53C600C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		90FAEEE3205D53CC00C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -52,6 +71,21 @@
 		90FAEEF7205D540E00C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		90FAEEF9205D541300C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		90FAEEFB205D541800C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90FAEEFD205D55A100C4BCD1 /* BrandViewAntiflex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewAntiflex.swift; sourceTree = "<group>"; };
+		90FAEEFF205D55B000C4BCD1 /* BrandViewBrentax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewBrentax.swift; sourceTree = "<group>"; };
+		90FAEF01205D55BC00C4BCD1 /* BrandViewCromteq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewCromteq.swift; sourceTree = "<group>"; };
+		90FAEF03205D55C500C4BCD1 /* BrandViewDistando.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewDistando.swift; sourceTree = "<group>"; };
+		90FAEF05205D55D100C4BCD1 /* BrandViewEftua.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewEftua.swift; sourceTree = "<group>"; };
+		90FAEF07205D55DA00C4BCD1 /* BrandViewFantisol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewFantisol.swift; sourceTree = "<group>"; };
+		90FAEF09205D55EA00C4BCD1 /* BrandViewFreemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewFreemo.swift; sourceTree = "<group>"; };
+		90FAEF0B205D55F400C4BCD1 /* BrandViewGiontas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewGiontas.swift; sourceTree = "<group>"; };
+		90FAEF0D205D55FD00C4BCD1 /* BrandViewHaemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewHaemo.swift; sourceTree = "<group>"; };
+		90FAEF0F205D560400C4BCD1 /* BrandViewIodyne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewIodyne.swift; sourceTree = "<group>"; };
+		90FAEF11205D560C00C4BCD1 /* BrandViewJoolenta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewJoolenta.swift; sourceTree = "<group>"; };
+		90FAEF14205D561B00C4BCD1 /* BrandViewKreaten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewKreaten.swift; sourceTree = "<group>"; };
+		90FAEF16205D562500C4BCD1 /* BrandViewLateqniq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewLateqniq.swift; sourceTree = "<group>"; };
+		90FAEF18205D562E00C4BCD1 /* BrandViewMurtelio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewMurtelio.swift; sourceTree = "<group>"; };
+		90FAEF1A205D563E00C4BCD1 /* BrandViewWebtraks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewWebtraks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +121,8 @@
 				90FAEECF205D52E700C4BCD1 /* brands */,
 				9042B7242056F88C000DB49A /* AppDelegate.swift */,
 				9042B7262056F88C000DB49A /* ViewController.swift */,
+				90D241C1205D4ED40086B982 /* BrandView.swift */,
+				90D241C3205D4F200086B982 /* BrandViewContainerView.swift */,
 				9042B72B2056F88C000DB49A /* Assets.xcassets */,
 				9042B72D2056F88C000DB49A /* LaunchScreen.storyboard */,
 				9042B7302056F88C000DB49A /* Info.plist */,
@@ -121,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEDF205D53B900C4BCD1 /* Media.xcassets */,
+				90FAEEFD205D55A100C4BCD1 /* BrandViewAntiflex.swift */,
 			);
 			path = antiflex;
 			sourceTree = "<group>";
@@ -129,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEE1205D53C600C4BCD1 /* Media.xcassets */,
+				90FAEEFF205D55B000C4BCD1 /* BrandViewBrentax.swift */,
 			);
 			path = brentax;
 			sourceTree = "<group>";
@@ -137,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEE3205D53CC00C4BCD1 /* Media.xcassets */,
+				90FAEF01205D55BC00C4BCD1 /* BrandViewCromteq.swift */,
 			);
 			path = cromteq;
 			sourceTree = "<group>";
@@ -145,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEE5205D53D300C4BCD1 /* Media.xcassets */,
+				90FAEF03205D55C500C4BCD1 /* BrandViewDistando.swift */,
 			);
 			path = distando;
 			sourceTree = "<group>";
@@ -153,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEE7205D53D800C4BCD1 /* Media.xcassets */,
+				90FAEF05205D55D100C4BCD1 /* BrandViewEftua.swift */,
 			);
 			path = eftua;
 			sourceTree = "<group>";
@@ -161,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEE9205D53DE00C4BCD1 /* Media.xcassets */,
+				90FAEF07205D55DA00C4BCD1 /* BrandViewFantisol.swift */,
 			);
 			path = fantisol;
 			sourceTree = "<group>";
@@ -169,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEEB205D53E300C4BCD1 /* Media.xcassets */,
+				90FAEF09205D55EA00C4BCD1 /* BrandViewFreemo.swift */,
 			);
 			path = freemo;
 			sourceTree = "<group>";
@@ -177,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEED205D53EA00C4BCD1 /* Media.xcassets */,
+				90FAEF0B205D55F400C4BCD1 /* BrandViewGiontas.swift */,
 			);
 			path = giontas;
 			sourceTree = "<group>";
@@ -185,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEEF205D53F500C4BCD1 /* Media.xcassets */,
+				90FAEF0D205D55FD00C4BCD1 /* BrandViewHaemo.swift */,
 			);
 			path = haemo;
 			sourceTree = "<group>";
@@ -193,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEF1205D53FD00C4BCD1 /* Media.xcassets */,
+				90FAEF0F205D560400C4BCD1 /* BrandViewIodyne.swift */,
 			);
 			path = iodyne;
 			sourceTree = "<group>";
@@ -201,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEF3205D540300C4BCD1 /* Media.xcassets */,
+				90FAEF11205D560C00C4BCD1 /* BrandViewJoolenta.swift */,
 			);
 			path = joolenta;
 			sourceTree = "<group>";
@@ -209,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEF5205D540800C4BCD1 /* Media.xcassets */,
+				90FAEF14205D561B00C4BCD1 /* BrandViewKreaten.swift */,
 			);
 			path = kreaten;
 			sourceTree = "<group>";
@@ -217,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEF7205D540E00C4BCD1 /* Media.xcassets */,
+				90FAEF16205D562500C4BCD1 /* BrandViewLateqniq.swift */,
 			);
 			path = lateqniq;
 			sourceTree = "<group>";
@@ -225,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEF9205D541300C4BCD1 /* Media.xcassets */,
+				90FAEF18205D562E00C4BCD1 /* BrandViewMurtelio.swift */,
 			);
 			path = murtelio;
 			sourceTree = "<group>";
@@ -233,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				90FAEEFB205D541800C4BCD1 /* Media.xcassets */,
+				90FAEF1A205D563E00C4BCD1 /* BrandViewWebtraks.swift */,
 			);
 			path = webtraks;
 			sourceTree = "<group>";
@@ -324,8 +375,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90FAEF02205D55BC00C4BCD1 /* BrandViewCromteq.swift in Sources */,
 				9042B7272056F88C000DB49A /* ViewController.swift in Sources */,
+				90FAEF0A205D55EA00C4BCD1 /* BrandViewFreemo.swift in Sources */,
+				90FAEF04205D55C500C4BCD1 /* BrandViewDistando.swift in Sources */,
+				90FAEF06205D55D100C4BCD1 /* BrandViewEftua.swift in Sources */,
+				90FAEF08205D55DA00C4BCD1 /* BrandViewFantisol.swift in Sources */,
+				90D241C2205D4ED40086B982 /* BrandView.swift in Sources */,
 				9042B7252056F88C000DB49A /* AppDelegate.swift in Sources */,
+				90FAEF10205D560400C4BCD1 /* BrandViewIodyne.swift in Sources */,
+				90FAEF0C205D55F400C4BCD1 /* BrandViewGiontas.swift in Sources */,
+				90FAEF1B205D563E00C4BCD1 /* BrandViewWebtraks.swift in Sources */,
+				90FAEF0E205D55FD00C4BCD1 /* BrandViewHaemo.swift in Sources */,
+				90FAEF00205D55B000C4BCD1 /* BrandViewBrentax.swift in Sources */,
+				90FAEEFE205D55A100C4BCD1 /* BrandViewAntiflex.swift in Sources */,
+				90FAEF19205D562E00C4BCD1 /* BrandViewMurtelio.swift in Sources */,
+				90FAEF15205D561B00C4BCD1 /* BrandViewKreaten.swift in Sources */,
+				90FAEF17205D562500C4BCD1 /* BrandViewLateqniq.swift in Sources */,
+				90D241C4205D4F200086B982 /* BrandViewContainerView.swift in Sources */,
+				90FAEF12205D560C00C4BCD1 /* BrandViewJoolenta.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
