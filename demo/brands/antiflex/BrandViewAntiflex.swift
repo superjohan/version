@@ -31,8 +31,19 @@ class BrandViewAntiflex: UIView, BrandView {
     }
 
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
+        let length = Constants.barLength / 5.0
+        let delay = length / 8.0
+
+        for i in 0..<self.subviews.count {
+            let view = self.subviews[i]
+            view.alpha = 0
+            let offset = CGFloat((Double(i + 1) * 20.0))
+            view.frame = CGRect(x: view.frame.origin.x - offset, y: view.frame.origin.y, width: view.frame.size.width, height: view.frame.size.height)
+            
+            UIView.animate(withDuration: length, delay: delay * Double(i), options: [ .curveEaseOut ], animations: {
+                view.alpha = 1
+                view.frame = self.frame
+            }, completion: nil)
         }
     }
 }
