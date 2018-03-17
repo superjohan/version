@@ -32,6 +32,7 @@ class BrandViewContainerView: UIView {
         self.addSubview(BrandViewLateqniq(frame: self.frame))
         self.addSubview(BrandViewMurtelio(frame: self.frame))
         self.addSubview(BrandViewPreolio(frame: self.frame))
+        self.addSubview(BrandViewUltrox(frame: self.frame))
         self.addSubview(BrandViewWebtraks(frame: self.frame))
         self.addSubview(BrandViewYamageruto(frame: self.frame))
 

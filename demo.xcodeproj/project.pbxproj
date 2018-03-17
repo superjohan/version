@@ -49,6 +49,8 @@
 		90FAEF22205D6CD600C4BCD1 /* BrandViewPreolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF21205D6CD600C4BCD1 /* BrandViewPreolio.swift */; };
 		90FAEF25205D716800C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEF24205D716800C4BCD1 /* Media.xcassets */; };
 		90FAEF27205D717500C4BCD1 /* BrandViewYamageruto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF26205D717500C4BCD1 /* BrandViewYamageruto.swift */; };
+		90FAEF2A205D739F00C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEF29205D739F00C4BCD1 /* Media.xcassets */; };
+		90FAEF2C205D73A800C4BCD1 /* BrandViewUltrox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF2B205D73A800C4BCD1 /* BrandViewUltrox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,8 @@
 		90FAEF21205D6CD600C4BCD1 /* BrandViewPreolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewPreolio.swift; sourceTree = "<group>"; };
 		90FAEF24205D716800C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		90FAEF26205D717500C4BCD1 /* BrandViewYamageruto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewYamageruto.swift; sourceTree = "<group>"; };
+		90FAEF29205D739F00C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90FAEF2B205D73A800C4BCD1 /* BrandViewUltrox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewUltrox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 				90FAEEDC205D537700C4BCD1 /* lateqniq */,
 				90FAEEDD205D537E00C4BCD1 /* murtelio */,
 				90FAEF1E205D6CB700C4BCD1 /* preolio */,
+				90FAEF28205D739300C4BCD1 /* ultrox */,
 				90FAEEDE205D538700C4BCD1 /* webtraks */,
 				90FAEF23205D715C00C4BCD1 /* yamageruto */,
 			);
@@ -319,6 +324,15 @@
 			path = yamageruto;
 			sourceTree = "<group>";
 		};
+		90FAEF28205D739300C4BCD1 /* ultrox */ = {
+			isa = PBXGroup;
+			children = (
+				90FAEF29205D739F00C4BCD1 /* Media.xcassets */,
+				90FAEF2B205D73A800C4BCD1 /* BrandViewUltrox.swift */,
+			);
+			path = ultrox;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -394,6 +408,7 @@
 				90FAEEF8205D540E00C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEF6205D540800C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEE4205D53CC00C4BCD1 /* Media.xcassets in Resources */,
+				90FAEF2A205D739F00C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEEA205D53DE00C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEF0205D53F500C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEFC205D541800C4BCD1 /* Media.xcassets in Resources */,
@@ -428,6 +443,7 @@
 				90FAEF15205D561B00C4BCD1 /* BrandViewKreaten.swift in Sources */,
 				90FAEF17205D562500C4BCD1 /* BrandViewLateqniq.swift in Sources */,
 				90FAEF22205D6CD600C4BCD1 /* BrandViewPreolio.swift in Sources */,
+				90FAEF2C205D73A800C4BCD1 /* BrandViewUltrox.swift in Sources */,
 				90D241C4205D4F200086B982 /* BrandViewContainerView.swift in Sources */,
 				90FAEF12205D560C00C4BCD1 /* BrandViewJoolenta.swift in Sources */,
 			);
