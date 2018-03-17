@@ -46,7 +46,11 @@ class BrandViewContainerView: UIView {
     
     func adjustFrames() {
         for view in self.subviews {
-            view.frame = self.frame
+            view.frame = self.bounds
+            
+            for subview in view.subviews {
+                subview.frame = self.bounds
+            }
         }
     }
     

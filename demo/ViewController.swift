@@ -112,6 +112,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
 
         self.brandViewContainer.frame = self.view.bounds
         self.brandViewContainer.isHidden = true
+        self.brandViewContainer.adjustFrames()
         
         self.startButton.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
         
