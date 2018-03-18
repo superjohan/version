@@ -14,6 +14,12 @@
 		90D241C0205D42690086B982 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90D241BF205D42690086B982 /* audio.mp3 */; };
 		90D241C2205D4ED40086B982 /* BrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D241C1205D4ED40086B982 /* BrandView.swift */; };
 		90D241C4205D4F200086B982 /* BrandViewContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D241C3205D4F200086B982 /* BrandViewContainerView.swift */; };
+		90F2D313205EE63F00419813 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D312205EE63F00419813 /* Media.xcassets */; };
+		90F2D315205EE64900419813 /* BrandViewNeandertek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D314205EE64900419813 /* BrandViewNeandertek.swift */; };
+		90F2D318205EE74A00419813 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D317205EE74A00419813 /* Media.xcassets */; };
+		90F2D31A205EE75700419813 /* BrandViewQuantifex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D319205EE75700419813 /* BrandViewQuantifex.swift */; };
+		90F2D31D205EE8C400419813 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D31C205EE8C400419813 /* Media.xcassets */; };
+		90F2D31F205EE8CE00419813 /* BrandViewSantafelos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D31E205EE8CE00419813 /* BrandViewSantafelos.swift */; };
 		90F62A6C205ECBD8002FE66B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F62A6B205ECBD8002FE66B /* Media.xcassets */; };
 		90F62A6E205ECBE3002FE66B /* BrandViewXerion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F62A6D205ECBE3002FE66B /* BrandViewXerion.swift */; };
 		90F62A71205ECC40002FE66B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F62A70205ECC40002FE66B /* Media.xcassets */; };
@@ -75,6 +81,12 @@
 		90D241BF205D42690086B982 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
 		90D241C1205D4ED40086B982 /* BrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandView.swift; sourceTree = "<group>"; };
 		90D241C3205D4F200086B982 /* BrandViewContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewContainerView.swift; sourceTree = "<group>"; };
+		90F2D312205EE63F00419813 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90F2D314205EE64900419813 /* BrandViewNeandertek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewNeandertek.swift; sourceTree = "<group>"; };
+		90F2D317205EE74A00419813 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90F2D319205EE75700419813 /* BrandViewQuantifex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewQuantifex.swift; sourceTree = "<group>"; };
+		90F2D31C205EE8C400419813 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90F2D31E205EE8CE00419813 /* BrandViewSantafelos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewSantafelos.swift; sourceTree = "<group>"; };
 		90F62A6B205ECBD8002FE66B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		90F62A6D205ECBE3002FE66B /* BrandViewXerion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewXerion.swift; sourceTree = "<group>"; };
 		90F62A70205ECC40002FE66B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -170,6 +182,33 @@
 			path = demo;
 			sourceTree = "<group>";
 		};
+		90F2D311205EE63000419813 /* neandertek */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D312205EE63F00419813 /* Media.xcassets */,
+				90F2D314205EE64900419813 /* BrandViewNeandertek.swift */,
+			);
+			path = neandertek;
+			sourceTree = "<group>";
+		};
+		90F2D316205EE73D00419813 /* quantifex */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D317205EE74A00419813 /* Media.xcassets */,
+				90F2D319205EE75700419813 /* BrandViewQuantifex.swift */,
+			);
+			path = quantifex;
+			sourceTree = "<group>";
+		};
+		90F2D31B205EE8B700419813 /* santafelos */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D31C205EE8C400419813 /* Media.xcassets */,
+				90F2D31E205EE8CE00419813 /* BrandViewSantafelos.swift */,
+			);
+			path = santafelos;
+			sourceTree = "<group>";
+		};
 		90F62A6A205ECBC7002FE66B /* xerion */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,10 +282,13 @@
 				90FAEEDB205D537200C4BCD1 /* kreaten */,
 				90FAEEDC205D537700C4BCD1 /* lateqniq */,
 				90FAEEDD205D537E00C4BCD1 /* murtelio */,
+				90F2D311205EE63000419813 /* neandertek */,
 				90F62A79205ECF42002FE66B /* oeland */,
 				90F62A7F205ED071002FE66B /* oventus */,
 				90FAEF1E205D6CB700C4BCD1 /* preolio */,
+				90F2D316205EE73D00419813 /* quantifex */,
 				90F62A84205ED32B002FE66B /* remotex */,
+				90F2D31B205EE8B700419813 /* santafelos */,
 				90FAEF28205D739300C4BCD1 /* ultrox */,
 				90FAEEDE205D538700C4BCD1 /* webtraks */,
 				90F62A6A205ECBC7002FE66B /* xerion */,
@@ -478,6 +520,7 @@
 			files = (
 				90FAEEEC205D53E300C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEE2205D53C600C4BCD1 /* Media.xcassets in Resources */,
+				90F2D313205EE63F00419813 /* Media.xcassets in Resources */,
 				90F62A81205ED07B002FE66B /* Media.xcassets in Resources */,
 				90FAEEF4205D540300C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEFA205D541300C4BCD1 /* Media.xcassets in Resources */,
@@ -485,6 +528,7 @@
 				90F62A7B205ECF4D002FE66B /* Media.xcassets in Resources */,
 				9042B72F2056F88C000DB49A /* LaunchScreen.storyboard in Resources */,
 				90FAEEE8205D53D800C4BCD1 /* Media.xcassets in Resources */,
+				90F2D31D205EE8C400419813 /* Media.xcassets in Resources */,
 				90FAEF20205D6CC500C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEE6205D53D300C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEEE205D53EA00C4BCD1 /* Media.xcassets in Resources */,
@@ -500,6 +544,7 @@
 				90F62A6C205ECBD8002FE66B /* Media.xcassets in Resources */,
 				90FAEF2A205D739F00C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEEA205D53DE00C4BCD1 /* Media.xcassets in Resources */,
+				90F2D318205EE74A00419813 /* Media.xcassets in Resources */,
 				90FAEEF0205D53F500C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEFC205D541800C4BCD1 /* Media.xcassets in Resources */,
 				9042B72C2056F88C000DB49A /* Assets.xcassets in Resources */,
@@ -516,8 +561,10 @@
 				90FAEF02205D55BC00C4BCD1 /* BrandViewCromteq.swift in Sources */,
 				9042B7272056F88C000DB49A /* ViewController.swift in Sources */,
 				90FAEF0A205D55EA00C4BCD1 /* BrandViewFreemo.swift in Sources */,
+				90F2D315205EE64900419813 /* BrandViewNeandertek.swift in Sources */,
 				90FAEF04205D55C500C4BCD1 /* BrandViewDistando.swift in Sources */,
 				90FAEF06205D55D100C4BCD1 /* BrandViewEftua.swift in Sources */,
+				90F2D31F205EE8CE00419813 /* BrandViewSantafelos.swift in Sources */,
 				90F62A73205ECC4A002FE66B /* BrandViewBotastica.swift in Sources */,
 				90FAEF08205D55DA00C4BCD1 /* BrandViewFantisol.swift in Sources */,
 				90D241C2205D4ED40086B982 /* BrandView.swift in Sources */,
@@ -540,6 +587,7 @@
 				90FAEF2C205D73A800C4BCD1 /* BrandViewUltrox.swift in Sources */,
 				90D241C4205D4F200086B982 /* BrandViewContainerView.swift in Sources */,
 				90FAEF12205D560C00C4BCD1 /* BrandViewJoolenta.swift in Sources */,
+				90F2D31A205EE75700419813 /* BrandViewQuantifex.swift in Sources */,
 				90F62A6E205ECBE3002FE66B /* BrandViewXerion.swift in Sources */,
 				90F62A83205ED085002FE66B /* BrandViewOventus.swift in Sources */,
 			);
