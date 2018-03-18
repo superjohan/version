@@ -40,12 +40,15 @@ class BrandViewContainerView: UIView {
         self.addSubview(BrandViewQuantifex(frame: self.frame))
         self.addSubview(BrandViewRemotex(frame: self.frame))
         self.addSubview(BrandViewSantafelos(frame: self.frame))
+        self.addSubview(BrandViewSeptogon(frame: self.frame))
+        self.addSubview(BrandViewTechnikon(frame: self.frame))
         self.addSubview(BrandViewUltrox(frame: self.frame))
         self.addSubview(BrandViewUniventa(frame: self.frame))
         self.addSubview(BrandViewVisioland(frame: self.frame))
         self.addSubview(BrandViewWebtraks(frame: self.frame))
         self.addSubview(BrandViewYamageruto(frame: self.frame))
         self.addSubview(BrandViewXerion(frame: self.frame))
+        self.addSubview(BrandViewZophario(frame: self.frame))
 
         for view in self.subviews {
             view.isHidden = true

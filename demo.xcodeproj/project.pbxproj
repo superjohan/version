@@ -24,6 +24,12 @@
 		90F2D324205EED6B00419813 /* BrandViewUniventa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D323205EED6B00419813 /* BrandViewUniventa.swift */; };
 		90F2D327205EEF0800419813 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D326205EEF0800419813 /* Media.xcassets */; };
 		90F2D329205EEF1400419813 /* BrandViewVisioland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D328205EEF1400419813 /* BrandViewVisioland.swift */; };
+		90F2D32C205EF1B800419813 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D32B205EF1B800419813 /* Media.xcassets */; };
+		90F2D32E205EF1C300419813 /* BrandViewTechnikon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D32D205EF1C300419813 /* BrandViewTechnikon.swift */; };
+		90F2D331205EF2BB00419813 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D330205EF2BB00419813 /* Media.xcassets */; };
+		90F2D333205EF2C500419813 /* BrandViewSeptogon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D332205EF2C500419813 /* BrandViewSeptogon.swift */; };
+		90F2D336205EF3CD00419813 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D335205EF3CD00419813 /* Media.xcassets */; };
+		90F2D338205EF3D700419813 /* BrandViewZophario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D337205EF3D700419813 /* BrandViewZophario.swift */; };
 		90F62A6C205ECBD8002FE66B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F62A6B205ECBD8002FE66B /* Media.xcassets */; };
 		90F62A6E205ECBE3002FE66B /* BrandViewXerion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F62A6D205ECBE3002FE66B /* BrandViewXerion.swift */; };
 		90F62A71205ECC40002FE66B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F62A70205ECC40002FE66B /* Media.xcassets */; };
@@ -95,6 +101,12 @@
 		90F2D323205EED6B00419813 /* BrandViewUniventa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewUniventa.swift; sourceTree = "<group>"; };
 		90F2D326205EEF0800419813 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		90F2D328205EEF1400419813 /* BrandViewVisioland.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewVisioland.swift; sourceTree = "<group>"; };
+		90F2D32B205EF1B800419813 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90F2D32D205EF1C300419813 /* BrandViewTechnikon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewTechnikon.swift; sourceTree = "<group>"; };
+		90F2D330205EF2BB00419813 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90F2D332205EF2C500419813 /* BrandViewSeptogon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewSeptogon.swift; sourceTree = "<group>"; };
+		90F2D335205EF3CD00419813 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90F2D337205EF3D700419813 /* BrandViewZophario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewZophario.swift; sourceTree = "<group>"; };
 		90F62A6B205ECBD8002FE66B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		90F62A6D205ECBE3002FE66B /* BrandViewXerion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewXerion.swift; sourceTree = "<group>"; };
 		90F62A70205ECC40002FE66B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -235,6 +247,33 @@
 			path = visioland;
 			sourceTree = "<group>";
 		};
+		90F2D32A205EF1AD00419813 /* technikon */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D32B205EF1B800419813 /* Media.xcassets */,
+				90F2D32D205EF1C300419813 /* BrandViewTechnikon.swift */,
+			);
+			path = technikon;
+			sourceTree = "<group>";
+		};
+		90F2D32F205EF2B000419813 /* septogon */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D330205EF2BB00419813 /* Media.xcassets */,
+				90F2D332205EF2C500419813 /* BrandViewSeptogon.swift */,
+			);
+			path = septogon;
+			sourceTree = "<group>";
+		};
+		90F2D334205EF3C100419813 /* zophario */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D335205EF3CD00419813 /* Media.xcassets */,
+				90F2D337205EF3D700419813 /* BrandViewZophario.swift */,
+			);
+			path = zophario;
+			sourceTree = "<group>";
+		};
 		90F62A6A205ECBC7002FE66B /* xerion */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,12 +354,15 @@
 				90F2D316205EE73D00419813 /* quantifex */,
 				90F62A84205ED32B002FE66B /* remotex */,
 				90F2D31B205EE8B700419813 /* santafelos */,
+				90F2D32F205EF2B000419813 /* septogon */,
+				90F2D32A205EF1AD00419813 /* technikon */,
 				90FAEF28205D739300C4BCD1 /* ultrox */,
 				90F2D320205EED5100419813 /* univenta */,
 				90F2D325205EEEFC00419813 /* visioland */,
 				90FAEEDE205D538700C4BCD1 /* webtraks */,
 				90F62A6A205ECBC7002FE66B /* xerion */,
 				90FAEF23205D715C00C4BCD1 /* yamageruto */,
+				90F2D334205EF3C100419813 /* zophario */,
 			);
 			path = brands;
 			sourceTree = "<group>";
@@ -562,9 +604,11 @@
 				90FAEEE6205D53D300C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEEE205D53EA00C4BCD1 /* Media.xcassets in Resources */,
 				90F62A76205ECDEB002FE66B /* Media.xcassets in Resources */,
+				90F2D32C205EF1B800419813 /* Media.xcassets in Resources */,
 				90FAEF25205D716800C4BCD1 /* Media.xcassets in Resources */,
 				90F2D322205EED6000419813 /* Media.xcassets in Resources */,
 				90F62A71205ECC40002FE66B /* Media.xcassets in Resources */,
+				90F2D331205EF2BB00419813 /* Media.xcassets in Resources */,
 				90D241C0205D42690086B982 /* audio.mp3 in Resources */,
 				90F62A86205ED336002FE66B /* Media.xcassets in Resources */,
 				90FAEEE0205D53B900C4BCD1 /* Media.xcassets in Resources */,
@@ -574,6 +618,7 @@
 				90F62A6C205ECBD8002FE66B /* Media.xcassets in Resources */,
 				90FAEF2A205D739F00C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEEA205D53DE00C4BCD1 /* Media.xcassets in Resources */,
+				90F2D336205EF3CD00419813 /* Media.xcassets in Resources */,
 				90F2D318205EE74A00419813 /* Media.xcassets in Resources */,
 				90FAEEF0205D53F500C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEFC205D541800C4BCD1 /* Media.xcassets in Resources */,
@@ -599,6 +644,7 @@
 				90FAEF08205D55DA00C4BCD1 /* BrandViewFantisol.swift in Sources */,
 				90D241C2205D4ED40086B982 /* BrandView.swift in Sources */,
 				90F2D324205EED6B00419813 /* BrandViewUniventa.swift in Sources */,
+				90F2D333205EF2C500419813 /* BrandViewSeptogon.swift in Sources */,
 				9042B7252056F88C000DB49A /* AppDelegate.swift in Sources */,
 				90FAEF10205D560400C4BCD1 /* BrandViewIodyne.swift in Sources */,
 				90FAEF0C205D55F400C4BCD1 /* BrandViewGiontas.swift in Sources */,
@@ -606,7 +652,9 @@
 				90FAEF27205D717500C4BCD1 /* BrandViewYamageruto.swift in Sources */,
 				90FAEF1B205D563E00C4BCD1 /* BrandViewWebtraks.swift in Sources */,
 				90FAEF0E205D55FD00C4BCD1 /* BrandViewHaemo.swift in Sources */,
+				90F2D338205EF3D700419813 /* BrandViewZophario.swift in Sources */,
 				90FAEF00205D55B000C4BCD1 /* BrandViewBrentax.swift in Sources */,
+				90F2D32E205EF1C300419813 /* BrandViewTechnikon.swift in Sources */,
 				90FAEEFE205D55A100C4BCD1 /* BrandViewAntiflex.swift in Sources */,
 				90FAEF19205D562E00C4BCD1 /* BrandViewMurtelio.swift in Sources */,
 				90F62A78205ECDF5002FE66B /* BrandViewEkrom.swift in Sources */,
