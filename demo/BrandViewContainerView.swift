@@ -18,10 +18,12 @@ class BrandViewContainerView: UIView {
         self.backgroundColor = .white
         
         self.addSubview(BrandViewAntiflex(frame: self.frame))
+        self.addSubview(BrandViewBotastica(frame: self.frame))
         self.addSubview(BrandViewBrentax(frame: self.frame))
         self.addSubview(BrandViewCromteq(frame: self.frame))
         self.addSubview(BrandViewDistando(frame: self.frame))
         self.addSubview(BrandViewEftua(frame: self.frame))
+        self.addSubview(BrandViewEkrom(frame: self.frame))
         self.addSubview(BrandViewFantisol(frame: self.frame))
         self.addSubview(BrandViewFreemo(frame: self.frame))
         self.addSubview(BrandViewGiontas(frame: self.frame))
@@ -31,10 +33,14 @@ class BrandViewContainerView: UIView {
         self.addSubview(BrandViewKreaten(frame: self.frame))
         self.addSubview(BrandViewLateqniq(frame: self.frame))
         self.addSubview(BrandViewMurtelio(frame: self.frame))
+        self.addSubview(BrandViewOeland(frame: self.frame))
+        self.addSubview(BrandViewOventus(frame: self.frame))
         self.addSubview(BrandViewPreolio(frame: self.frame))
+        self.addSubview(BrandViewRemotex(frame: self.frame))
         self.addSubview(BrandViewUltrox(frame: self.frame))
         self.addSubview(BrandViewWebtraks(frame: self.frame))
         self.addSubview(BrandViewYamageruto(frame: self.frame))
+        self.addSubview(BrandViewXerion(frame: self.frame))
 
         for view in self.subviews {
             view.isHidden = true

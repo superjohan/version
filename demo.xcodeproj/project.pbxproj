@@ -14,6 +14,18 @@
 		90D241C0205D42690086B982 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90D241BF205D42690086B982 /* audio.mp3 */; };
 		90D241C2205D4ED40086B982 /* BrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D241C1205D4ED40086B982 /* BrandView.swift */; };
 		90D241C4205D4F200086B982 /* BrandViewContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D241C3205D4F200086B982 /* BrandViewContainerView.swift */; };
+		90F62A6C205ECBD8002FE66B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F62A6B205ECBD8002FE66B /* Media.xcassets */; };
+		90F62A6E205ECBE3002FE66B /* BrandViewXerion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F62A6D205ECBE3002FE66B /* BrandViewXerion.swift */; };
+		90F62A71205ECC40002FE66B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F62A70205ECC40002FE66B /* Media.xcassets */; };
+		90F62A73205ECC4A002FE66B /* BrandViewBotastica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F62A72205ECC4A002FE66B /* BrandViewBotastica.swift */; };
+		90F62A76205ECDEB002FE66B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F62A75205ECDEB002FE66B /* Media.xcassets */; };
+		90F62A78205ECDF5002FE66B /* BrandViewEkrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F62A77205ECDF5002FE66B /* BrandViewEkrom.swift */; };
+		90F62A7B205ECF4D002FE66B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F62A7A205ECF4D002FE66B /* Media.xcassets */; };
+		90F62A7D205ECF56002FE66B /* BrandViewOeland.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F62A7C205ECF56002FE66B /* BrandViewOeland.swift */; };
+		90F62A81205ED07B002FE66B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F62A80205ED07B002FE66B /* Media.xcassets */; };
+		90F62A83205ED085002FE66B /* BrandViewOventus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F62A82205ED085002FE66B /* BrandViewOventus.swift */; };
+		90F62A86205ED336002FE66B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F62A85205ED336002FE66B /* Media.xcassets */; };
+		90F62A88205ED341002FE66B /* BrandViewRemotex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F62A87205ED341002FE66B /* BrandViewRemotex.swift */; };
 		90FAEEE0205D53B900C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEEDF205D53B900C4BCD1 /* Media.xcassets */; };
 		90FAEEE2205D53C600C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEEE1205D53C600C4BCD1 /* Media.xcassets */; };
 		90FAEEE4205D53CC00C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEEE3205D53CC00C4BCD1 /* Media.xcassets */; };
@@ -63,6 +75,18 @@
 		90D241BF205D42690086B982 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
 		90D241C1205D4ED40086B982 /* BrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandView.swift; sourceTree = "<group>"; };
 		90D241C3205D4F200086B982 /* BrandViewContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewContainerView.swift; sourceTree = "<group>"; };
+		90F62A6B205ECBD8002FE66B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90F62A6D205ECBE3002FE66B /* BrandViewXerion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewXerion.swift; sourceTree = "<group>"; };
+		90F62A70205ECC40002FE66B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90F62A72205ECC4A002FE66B /* BrandViewBotastica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewBotastica.swift; sourceTree = "<group>"; };
+		90F62A75205ECDEB002FE66B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90F62A77205ECDF5002FE66B /* BrandViewEkrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewEkrom.swift; sourceTree = "<group>"; };
+		90F62A7A205ECF4D002FE66B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90F62A7C205ECF56002FE66B /* BrandViewOeland.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewOeland.swift; sourceTree = "<group>"; };
+		90F62A80205ED07B002FE66B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90F62A82205ED085002FE66B /* BrandViewOventus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewOventus.swift; sourceTree = "<group>"; };
+		90F62A85205ED336002FE66B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		90F62A87205ED341002FE66B /* BrandViewRemotex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewRemotex.swift; sourceTree = "<group>"; };
 		90FAEEDF205D53B900C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		90FAEEE1205D53C600C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		90FAEEE3205D53CC00C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -146,14 +170,70 @@
 			path = demo;
 			sourceTree = "<group>";
 		};
+		90F62A6A205ECBC7002FE66B /* xerion */ = {
+			isa = PBXGroup;
+			children = (
+				90F62A6B205ECBD8002FE66B /* Media.xcassets */,
+				90F62A6D205ECBE3002FE66B /* BrandViewXerion.swift */,
+			);
+			path = xerion;
+			sourceTree = "<group>";
+		};
+		90F62A6F205ECC2F002FE66B /* botastica */ = {
+			isa = PBXGroup;
+			children = (
+				90F62A70205ECC40002FE66B /* Media.xcassets */,
+				90F62A72205ECC4A002FE66B /* BrandViewBotastica.swift */,
+			);
+			path = botastica;
+			sourceTree = "<group>";
+		};
+		90F62A74205ECDE1002FE66B /* ekrom */ = {
+			isa = PBXGroup;
+			children = (
+				90F62A75205ECDEB002FE66B /* Media.xcassets */,
+				90F62A77205ECDF5002FE66B /* BrandViewEkrom.swift */,
+			);
+			path = ekrom;
+			sourceTree = "<group>";
+		};
+		90F62A79205ECF42002FE66B /* oeland */ = {
+			isa = PBXGroup;
+			children = (
+				90F62A7A205ECF4D002FE66B /* Media.xcassets */,
+				90F62A7C205ECF56002FE66B /* BrandViewOeland.swift */,
+			);
+			path = oeland;
+			sourceTree = "<group>";
+		};
+		90F62A7F205ED071002FE66B /* oventus */ = {
+			isa = PBXGroup;
+			children = (
+				90F62A80205ED07B002FE66B /* Media.xcassets */,
+				90F62A82205ED085002FE66B /* BrandViewOventus.swift */,
+			);
+			path = oventus;
+			sourceTree = "<group>";
+		};
+		90F62A84205ED32B002FE66B /* remotex */ = {
+			isa = PBXGroup;
+			children = (
+				90F62A85205ED336002FE66B /* Media.xcassets */,
+				90F62A87205ED341002FE66B /* BrandViewRemotex.swift */,
+			);
+			path = remotex;
+			sourceTree = "<group>";
+		};
 		90FAEECF205D52E700C4BCD1 /* brands */ = {
 			isa = PBXGroup;
 			children = (
 				90FAEED0205D532100C4BCD1 /* antiflex */,
+				90F62A6F205ECC2F002FE66B /* botastica */,
 				90FAEED1205D533300C4BCD1 /* brentax */,
 				90FAEED2205D533B00C4BCD1 /* cromteq */,
 				90FAEED3205D534300C4BCD1 /* distando */,
 				90FAEED4205D534800C4BCD1 /* eftua */,
+				90F62A74205ECDE1002FE66B /* ekrom */,
 				90FAEED5205D534F00C4BCD1 /* fantisol */,
 				90FAEED6205D535500C4BCD1 /* freemo */,
 				90FAEED7205D535900C4BCD1 /* giontas */,
@@ -163,9 +243,13 @@
 				90FAEEDB205D537200C4BCD1 /* kreaten */,
 				90FAEEDC205D537700C4BCD1 /* lateqniq */,
 				90FAEEDD205D537E00C4BCD1 /* murtelio */,
+				90F62A79205ECF42002FE66B /* oeland */,
+				90F62A7F205ED071002FE66B /* oventus */,
 				90FAEF1E205D6CB700C4BCD1 /* preolio */,
+				90F62A84205ED32B002FE66B /* remotex */,
 				90FAEF28205D739300C4BCD1 /* ultrox */,
 				90FAEEDE205D538700C4BCD1 /* webtraks */,
+				90F62A6A205ECBC7002FE66B /* xerion */,
 				90FAEF23205D715C00C4BCD1 /* yamageruto */,
 			);
 			path = brands;
@@ -394,20 +478,26 @@
 			files = (
 				90FAEEEC205D53E300C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEE2205D53C600C4BCD1 /* Media.xcassets in Resources */,
+				90F62A81205ED07B002FE66B /* Media.xcassets in Resources */,
 				90FAEEF4205D540300C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEFA205D541300C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEF2205D53FD00C4BCD1 /* Media.xcassets in Resources */,
+				90F62A7B205ECF4D002FE66B /* Media.xcassets in Resources */,
 				9042B72F2056F88C000DB49A /* LaunchScreen.storyboard in Resources */,
 				90FAEEE8205D53D800C4BCD1 /* Media.xcassets in Resources */,
 				90FAEF20205D6CC500C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEE6205D53D300C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEEE205D53EA00C4BCD1 /* Media.xcassets in Resources */,
+				90F62A76205ECDEB002FE66B /* Media.xcassets in Resources */,
 				90FAEF25205D716800C4BCD1 /* Media.xcassets in Resources */,
+				90F62A71205ECC40002FE66B /* Media.xcassets in Resources */,
 				90D241C0205D42690086B982 /* audio.mp3 in Resources */,
+				90F62A86205ED336002FE66B /* Media.xcassets in Resources */,
 				90FAEEE0205D53B900C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEF8205D540E00C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEF6205D540800C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEE4205D53CC00C4BCD1 /* Media.xcassets in Resources */,
+				90F62A6C205ECBD8002FE66B /* Media.xcassets in Resources */,
 				90FAEF2A205D739F00C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEEA205D53DE00C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEF0205D53F500C4BCD1 /* Media.xcassets in Resources */,
@@ -428,24 +518,30 @@
 				90FAEF0A205D55EA00C4BCD1 /* BrandViewFreemo.swift in Sources */,
 				90FAEF04205D55C500C4BCD1 /* BrandViewDistando.swift in Sources */,
 				90FAEF06205D55D100C4BCD1 /* BrandViewEftua.swift in Sources */,
+				90F62A73205ECC4A002FE66B /* BrandViewBotastica.swift in Sources */,
 				90FAEF08205D55DA00C4BCD1 /* BrandViewFantisol.swift in Sources */,
 				90D241C2205D4ED40086B982 /* BrandView.swift in Sources */,
 				9042B7252056F88C000DB49A /* AppDelegate.swift in Sources */,
 				90FAEF10205D560400C4BCD1 /* BrandViewIodyne.swift in Sources */,
 				90FAEF0C205D55F400C4BCD1 /* BrandViewGiontas.swift in Sources */,
+				90F62A88205ED341002FE66B /* BrandViewRemotex.swift in Sources */,
 				90FAEF27205D717500C4BCD1 /* BrandViewYamageruto.swift in Sources */,
 				90FAEF1B205D563E00C4BCD1 /* BrandViewWebtraks.swift in Sources */,
 				90FAEF0E205D55FD00C4BCD1 /* BrandViewHaemo.swift in Sources */,
 				90FAEF00205D55B000C4BCD1 /* BrandViewBrentax.swift in Sources */,
 				90FAEEFE205D55A100C4BCD1 /* BrandViewAntiflex.swift in Sources */,
 				90FAEF19205D562E00C4BCD1 /* BrandViewMurtelio.swift in Sources */,
+				90F62A78205ECDF5002FE66B /* BrandViewEkrom.swift in Sources */,
 				90FAEF1D205D65FE00C4BCD1 /* Constants.swift in Sources */,
 				90FAEF15205D561B00C4BCD1 /* BrandViewKreaten.swift in Sources */,
+				90F62A7D205ECF56002FE66B /* BrandViewOeland.swift in Sources */,
 				90FAEF17205D562500C4BCD1 /* BrandViewLateqniq.swift in Sources */,
 				90FAEF22205D6CD600C4BCD1 /* BrandViewPreolio.swift in Sources */,
 				90FAEF2C205D73A800C4BCD1 /* BrandViewUltrox.swift in Sources */,
 				90D241C4205D4F200086B982 /* BrandViewContainerView.swift in Sources */,
 				90FAEF12205D560C00C4BCD1 /* BrandViewJoolenta.swift in Sources */,
+				90F62A6E205ECBE3002FE66B /* BrandViewXerion.swift in Sources */,
+				90F62A83205ED085002FE66B /* BrandViewOventus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
