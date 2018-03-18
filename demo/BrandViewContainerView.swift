@@ -41,6 +41,8 @@ class BrandViewContainerView: UIView {
         self.addSubview(BrandViewRemotex(frame: self.frame))
         self.addSubview(BrandViewSantafelos(frame: self.frame))
         self.addSubview(BrandViewUltrox(frame: self.frame))
+        self.addSubview(BrandViewUniventa(frame: self.frame))
+        self.addSubview(BrandViewVisioland(frame: self.frame))
         self.addSubview(BrandViewWebtraks(frame: self.frame))
         self.addSubview(BrandViewYamageruto(frame: self.frame))
         self.addSubview(BrandViewXerion(frame: self.frame))
