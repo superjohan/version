@@ -31,8 +31,15 @@ class BrandViewFantisol: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
-        }
+        let length = Constants.barLength / 4
+        
+        let logo = self.subviews[0]
+        logo.alpha = 0
+        logo.layer.transform = CATransform3DRotate(CATransform3DIdentity, CGFloat.pi, 1, 0, 0)
+        
+        UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseOut ], animations: {
+            logo.alpha = 1
+            logo.layer.transform = CATransform3DIdentity
+        }, completion: nil)
     }
 }
