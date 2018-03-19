@@ -31,8 +31,29 @@ class BrandViewCromteq: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
+        let length = Constants.barLength / 6.0
+        
+        for i in 0..<3 {
+            let view = self.subviews[i]
+            view.alpha = 0
+            let offset = i % 2 == 0 ? CGFloat(20) : CGFloat(-20)
+            view.frame = CGRect(x: view.frame.origin.x, y: view.frame.origin.y + offset, width: view.frame.size.width, height: view.frame.size.height)
+            
+            UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseOut ], animations: {
+                view.alpha = 1
+                view.frame = self.frame
+            }, completion: nil)
+        }
+
+        let delay = length / 8.0
+
+        for i in 3..<10 {
+            let view = self.subviews[i]
+            view.alpha = 0
+            
+            UIView.animate(withDuration: length, delay: (length / 2.0) + delay * Double(i), options: [ .curveEaseOut ], animations: {
+                view.alpha = 1
+            }, completion: nil)
         }
     }
 }
