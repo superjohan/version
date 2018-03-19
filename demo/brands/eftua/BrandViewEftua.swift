@@ -31,8 +31,18 @@ class BrandViewEftua: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
+        let length = Constants.barLength / 5
+        let delay = length / 5
+        
+        for i in 0..<self.subviews.count {
+            let view = self.subviews[i]
+            view.alpha = 0
+            view.layer.transform = CATransform3DRotate(CATransform3DIdentity, CGFloat.pi / 2, 1, 0, 0)
+            
+            UIView.animate(withDuration: length, delay: Double(i) * delay, options: [ .curveEaseOut ], animations: {
+                view.alpha = 1
+                view.layer.transform = CATransform3DIdentity
+            }, completion: nil)
         }
     }
 }
