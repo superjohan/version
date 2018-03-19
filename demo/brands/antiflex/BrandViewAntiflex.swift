@@ -31,7 +31,7 @@ class BrandViewAntiflex: UIView, BrandView {
     }
 
     func animateBrand() {
-        let length = Constants.barLength / 5.0
+        let length = Constants.barLength / 6.0
         let delay = length / 8.0
 
         for i in 0..<self.subviews.count {
