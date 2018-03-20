@@ -51,7 +51,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
                 "by dekadence\n" +
                 "\n" +
                 "programming, music, and graphics by ricky martin\n" +
-                "graphics by jaakko\n"
+                "graphics by jaakko\n" +
                 "\n" +
                 "presented at revision 2018\n" +
                 "\n" +
