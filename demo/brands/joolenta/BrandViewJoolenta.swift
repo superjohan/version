@@ -31,8 +31,25 @@ class BrandViewJoolenta: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
-        }
+        let length = Constants.barLength / 5.0
+        let delay = length / 3.0
+
+        let logo = self.subviews[0]
+        logo.alpha = 0
+        logo.transform = CGAffineTransform.init(rotationAngle: CGFloat(Double.pi / 4))
+        
+        UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseInOut ], animations: {
+            logo.alpha = 1
+            logo.transform = CGAffineTransform.identity
+        }, completion: nil)
+
+        let cloud = self.subviews[1]
+        cloud.alpha = 0
+        cloud.transform = CGAffineTransform.init(scaleX: 0, y: 0)
+        
+        UIView.animate(withDuration: length, delay: delay, options: [ .curveEaseInOut ], animations: {
+            cloud.alpha = 1
+            cloud.transform = CGAffineTransform.identity
+        }, completion: nil)
     }
 }
