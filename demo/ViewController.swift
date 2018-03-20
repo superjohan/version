@@ -17,7 +17,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     let camera = SCNNode()
     let startButton: UIButton
     let qtFoolingBgView: UIView = UIView.init(frame: CGRect.zero)
-
+    
     let brandViewContainer = BrandViewContainerView(frame: .zero)
     
     var isInMiddleState = false
@@ -90,15 +90,15 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.audioPlayer.prepareToPlay()
         
         self.sceneView.scene = createScene()
     }
-
+    
     let testView1 = UIView()
     let testView2 = UIView()
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -108,11 +108,11 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
             width: 2,
             height: 2
         )
-
+        
         self.sceneView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
         self.sceneView.isPlaying = true
         self.sceneView.isHidden = true
-
+        
         self.brandViewContainer.frame = self.view.bounds
         self.brandViewContainer.isHidden = true
         self.brandViewContainer.adjustFrames()
@@ -127,7 +127,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         
         self.testView1.backgroundColor = .red
         self.testView2.backgroundColor = .green
-
+        
         self.testView1.isHidden = true
         self.testView2.isHidden = true
     }
@@ -139,7 +139,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     }
     
     // MARK: - SCNSceneRendererDelegate
-
+    
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         // this function is run in a background thread.
         DispatchQueue.main.async {
