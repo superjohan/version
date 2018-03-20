@@ -20,6 +20,10 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
 
     let brandViewContainer = BrandViewContainerView(frame: .zero)
     
+    var isInMiddleState = false
+    var middleCount = 0
+    var middleStart: TimeInterval = -1
+    
     // MARK: - UIViewController
     
     init() {
@@ -94,7 +98,6 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
 
     let testView1 = UIView()
     let testView2 = UIView()
-    let testView4 = UIView()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -118,19 +121,15 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         
         self.view.addSubview(self.testView1)
         self.view.addSubview(self.testView2)
-        self.view.addSubview(self.testView4)
         
         self.testView1.frame = self.view.bounds
         self.testView2.frame = self.view.bounds
-        self.testView4.frame = self.view.bounds
         
         self.testView1.backgroundColor = .red
         self.testView2.backgroundColor = .green
-        self.testView4.backgroundColor = .yellow
 
         self.testView1.isHidden = true
         self.testView2.isHidden = true
-        self.testView4.isHidden = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -143,8 +142,22 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
 
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         // this function is run in a background thread.
-//        DispatchQueue.main.async {
-//        }
+        DispatchQueue.main.async {
+            if self.isInMiddleState {
+                // note for the future: if quicktime can handle this updating every frame, then do that instead
+                
+                if self.middleStart < 0 {
+                    self.middleStart = time
+                    self.showNextBrand()
+                }
+                
+                let delta = time - self.middleStart
+                
+                if delta > 0.033333 {
+                    self.middleStart = -1
+                }
+            }
+        }
     }
     
     // MARK: - Private
@@ -205,7 +218,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.testView1.isHidden = false
         self.testView2.isHidden = true
         self.brandViewContainer.isHidden = true
-        self.testView4.isHidden = true
+        self.isInMiddleState = false
     }
     
     @objc
@@ -213,7 +226,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.testView1.isHidden = true
         self.testView2.isHidden = false
         self.brandViewContainer.isHidden = true
-        self.testView4.isHidden = true
+        self.isInMiddleState = false
     }
     
     @objc
@@ -221,8 +234,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.testView1.isHidden = true
         self.testView2.isHidden = true
         self.brandViewContainer.isHidden = false
-        self.testView4.isHidden = true
-
+        self.isInMiddleState = false
+        
         self.brandViewContainer.showBrand(Int(arc4random_uniform(15)), animated: false)
     }
     
@@ -230,8 +243,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     fileprivate func showMiddleState() {
         self.testView1.isHidden = true
         self.testView2.isHidden = true
-        self.brandViewContainer.isHidden = true
-        self.testView4.isHidden = false
+        self.brandViewContainer.isHidden = false
+        self.isInMiddleState = true
     }
     
     @objc
@@ -239,7 +252,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.testView1.isHidden = true
         self.testView2.isHidden = true
         self.brandViewContainer.isHidden = true
-        self.testView4.isHidden = true
+        self.isInMiddleState = false
     }
     
     fileprivate func createScene() -> SCNScene {
@@ -262,5 +275,15 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         omniLightNode.light?.color = UIColor(white: 1.0, alpha: 1.0)
         omniLightNode.position = SCNVector3Make(0, 0, 60)
         scene.rootNode.addChildNode(omniLightNode)
+    }
+    
+    fileprivate func showNextBrand() {
+        self.brandViewContainer.showBrand(self.middleCount, animated: false)
+        
+        self.middleCount += 1
+        
+        if self.middleCount >= 32 {
+            self.middleCount = 0
+        }
     }
 }
