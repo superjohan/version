@@ -43,7 +43,7 @@ class BrandViewIodyne: UIView, BrandView {
         for i in 1..<self.subviews.count {
             let view = self.subviews[i]
             view.alpha = 0
-            view.transform = CGAffineTransform.init(rotationAngle: -CGFloat((Double.pi / 4)))
+            view.transform = CGAffineTransform.init(rotationAngle: -CGFloat(Double.pi / 4))
             
             UIView.animate(withDuration: length, delay: delay * Double(i), options: [ .curveEaseOut ], animations: {
                 view.alpha = 1
