@@ -180,7 +180,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         }
         
         for i in 0..<37 {
-            let position = Double(i) * barLength;
+            let position = Double(i) * barLength
             
             if i >= 0 && i < 16 {
                 scheduleBeatEvents(position: position)
