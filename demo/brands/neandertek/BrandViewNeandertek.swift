@@ -31,8 +31,28 @@ class BrandViewNeandertek: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
+        let length = Constants.barLength / 4.0
+        let delay = length / 6.0
+        
+        for i in 0..<self.subviews.count {
+            let view = self.subviews[i]
+            view.alpha = 0
+            
+            UIView.animate(withDuration: 0, delay: delay * Double(i), options: [ .curveEaseInOut ], animations: {
+                view.alpha = 1
+            }, completion: { _ in
+                UIView.animate(withDuration: length / 2, delay: 0, options: [ .curveEaseOut ], animations: {
+                    view.alpha = 0
+                }, completion: { _ in
+                    if i == 3 {
+                        for view2 in self.subviews {
+                            UIView.animate(withDuration: length / 2, delay: 0, options: [ .curveEaseInOut ], animations: {
+                                view2.alpha = 1
+                            }, completion: nil)
+                        }
+                    }
+                })
+            })
         }
     }
 }
