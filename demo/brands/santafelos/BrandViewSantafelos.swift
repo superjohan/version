@@ -15,7 +15,7 @@ class BrandViewSantafelos: UIView, BrandView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        loadImages(view: self, name: "santafelos", count: 2)
+        loadImages(view: self, name: "santafelos", count: 1)
     }
     
     required init?(coder aDecoder: NSCoder) {

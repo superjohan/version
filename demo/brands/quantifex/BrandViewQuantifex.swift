@@ -15,7 +15,7 @@ class BrandViewQuantifex: UIView, BrandView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        loadImages(view: self, name: "quantifex", count: 2)
+        loadImages(view: self, name: "quantifex", count: 4)
     }
     
     required init?(coder aDecoder: NSCoder) {

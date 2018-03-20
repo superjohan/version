@@ -15,7 +15,7 @@ class BrandViewUltrox: UIView, BrandView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        loadImages(view: self, name: "ultrox", count: 6)
+        loadImages(view: self, name: "ultrox", count: 3)
     }
     
     required init?(coder aDecoder: NSCoder) {

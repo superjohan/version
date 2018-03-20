@@ -15,7 +15,7 @@ class BrandViewNeandertek: UIView, BrandView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        loadImages(view: self, name: "neandertek", count: 5)
+        loadImages(view: self, name: "neandertek", count: 4)
     }
     
     required init?(coder aDecoder: NSCoder) {

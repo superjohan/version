@@ -15,7 +15,7 @@ class BrandViewVisioland: UIView, BrandView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        loadImages(view: self, name: "visioland", count: 4)
+        loadImages(view: self, name: "visioland", count: 3)
     }
     
     required init?(coder aDecoder: NSCoder) {

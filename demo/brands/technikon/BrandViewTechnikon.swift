@@ -15,7 +15,7 @@ class BrandViewTechnikon: UIView, BrandView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        loadImages(view: self, name: "technikon", count: 2)
+        loadImages(view: self, name: "technikon", count: 1)
     }
     
     required init?(coder aDecoder: NSCoder) {

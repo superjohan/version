@@ -15,7 +15,7 @@ class BrandViewRemotex: UIView, BrandView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        loadImages(view: self, name: "remotex", count: 8)
+        loadImages(view: self, name: "remotex", count: 3)
     }
     
     required init?(coder aDecoder: NSCoder) {
