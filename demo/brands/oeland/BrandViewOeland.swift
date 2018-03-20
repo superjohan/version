@@ -31,8 +31,23 @@ class BrandViewOeland: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
-        }
+        let length = Constants.barLength / 5.0
+        let delay = length / 4.0
+        
+        let square = self.subviews[0]
+        square.alpha = 0
+        square.transform = CGAffineTransform.init(scaleX: 0, y: 0)
+        
+        UIView.animate(withDuration: length, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.1, options: [], animations: {
+            square.alpha = 1
+            square.transform = CGAffineTransform.identity
+        }, completion: nil)
+        
+        let logo = self.subviews[1]
+        logo.alpha = 0
+        
+        UIView.animate(withDuration: length, delay: delay, options: [ .curveEaseInOut ], animations: {
+            logo.alpha = 1
+        }, completion: nil)
     }
 }
