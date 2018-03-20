@@ -31,8 +31,27 @@ class BrandViewLateqniq: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
+        let length = Constants.barLength / 6.0
+        let delay = length / 6.0
+        
+        let logo = self.subviews[0]
+        logo.alpha = 0
+        logo.frame.origin.x += 20
+        
+        UIView.animate(withDuration: length, delay: length, options: [ .curveEaseInOut ], animations: {
+            logo.alpha = 1
+            logo.frame = self.bounds
+        }, completion: nil)
+        
+        for i in 1..<self.subviews.count {
+            let view = self.subviews[i]
+            view.alpha = 0
+            view.frame.origin.y += 20
+            
+            UIView.animate(withDuration: length, delay: -delay + delay * Double(i), options: [ .curveEaseInOut ], animations: {
+                view.alpha = 1
+                view.frame = self.bounds
+            }, completion: nil)
         }
     }
 }
