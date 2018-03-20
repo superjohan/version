@@ -31,8 +31,24 @@ class BrandViewMurtelio: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
-        }
+        let length = Constants.barLength / 4
+        
+        let logo = self.subviews[0]
+        logo.alpha = 0
+        logo.frame.origin.x -= 40
+        
+        UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseInOut ], animations: {
+            logo.alpha = 1
+            logo.frame = self.bounds
+        }, completion: nil)
+        
+        let ball = self.subviews[1]
+        ball.alpha = 0
+        ball.frame.origin.x += 40
+        
+        UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseInOut ], animations: {
+            ball.alpha = 1
+            ball.frame = self.bounds
+        }, completion: nil)
     }
 }
