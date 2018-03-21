@@ -31,8 +31,14 @@ class BrandViewTechnikon: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
-        }
+        let length = Constants.barLength / 5
+        let view = self.subviews[0]
+        view.alpha = 0
+        view.transform = CGAffineTransform.init(scaleX: 3.0, y: 1.3)
+        
+        UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseInOut ], animations: {
+            view.alpha = 1
+            view.transform = CGAffineTransform.identity
+        }, completion: nil)
     }
 }
