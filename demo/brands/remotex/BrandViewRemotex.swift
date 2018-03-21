@@ -31,8 +31,29 @@ class BrandViewRemotex: UIView, BrandView {
     }
     
     func animateBrand() {
+        let length = Constants.barLength / 8
+
         for view in self.subviews {
-            view.isHidden = true
+            view.alpha = 0
         }
+
+        let view1 = self.subviews[2]
+        let view2 = self.subviews[1]
+        let view3 = self.subviews[0]
+        
+        UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseInOut ], animations: {
+            view1.alpha = 1
+        }, completion: { _ in
+            UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseInOut ], animations: {
+                view1.alpha = 0
+                view2.alpha = 1
+            }, completion: { _ in
+                UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseInOut ], animations: {
+                }, completion: { _ in
+                    view2.alpha = 0
+                    view3.alpha = 1
+                })
+            })
+        })
     }
 }
