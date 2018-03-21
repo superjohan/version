@@ -31,8 +31,24 @@ class BrandViewUniventa: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
-        }
+        let length = Constants.barLength / 4
+        
+        let logo = self.subviews[1]
+        logo.alpha = 0
+        logo.frame.origin.x += 20
+        
+        UIView.animate(withDuration: length, delay: length / 2, options: [ .curveEaseInOut ], animations: {
+            logo.alpha = 1
+            logo.frame = self.bounds
+        }, completion: nil)
+        
+        let icon = self.subviews[0]
+        icon.alpha = 0
+        icon.transform = CGAffineTransform.init(rotationAngle: -CGFloat.pi / 4)
+        
+        UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseOut ], animations: {
+            icon.alpha = 1
+            icon.transform = CGAffineTransform.identity
+        }, completion: nil)
     }
 }
