@@ -31,8 +31,29 @@ class BrandViewUltrox: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
+        let length = Constants.barLength / 5
+        let delay = length / 3
+        let base = self.subviews[2]
+        base.alpha = 0
+        
+        UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseInOut ], animations: {
+            base.alpha = 1
+        }, completion: nil)
+        
+        for i in 0..<(self.subviews.count - 1) {
+            let view = self.subviews[i]
+            view.alpha = 0
+            
+            if i % 2 == 0 {
+                view.frame.origin.y -= 20
+            } else {
+                view.frame.origin.y += 20
+            }
+
+            UIView.animate(withDuration: length, delay: delay * Double(i), options: [ .curveEaseInOut ], animations: {
+                view.alpha = 1
+                view.frame = self.bounds
+            }, completion: nil)
         }
     }
 }
