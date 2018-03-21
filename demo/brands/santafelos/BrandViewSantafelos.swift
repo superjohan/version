@@ -31,8 +31,19 @@ class BrandViewSantafelos: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
-        }
+        let length = Constants.barLength / 6
+        let view = self.subviews[0]
+        view.alpha = 0
+        view.frame.origin.x = -self.bounds.size.width
+        
+        UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseOut ], animations: {
+            view.alpha = 1
+            view.frame = self.bounds
+            view.transform = CGAffineTransform.init(rotationAngle: CGFloat(Double.pi / 6))
+        }, completion: { _ in
+            UIView.animate(withDuration: length, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.1, options: [], animations: {
+                view.transform = CGAffineTransform.identity
+            }, completion: nil)
+        })
     }
 }
