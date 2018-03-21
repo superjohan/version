@@ -148,12 +148,6 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.audioPlayer.stop()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        startButtonTouched(button: self.startButton)
-    }
-
     // MARK: - SCNSceneRendererDelegate
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
