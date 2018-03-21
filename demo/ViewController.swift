@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import SceneKit
 import Foundation
+import GameplayKit
 
 class ViewController: UIViewController, SCNSceneRendererDelegate {
     let audioPlayer: AVAudioPlayer
@@ -17,12 +18,13 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     let camera = SCNNode()
     let startButton: UIButton
     let qtFoolingBgView: UIView = UIView.init(frame: CGRect.zero)
-    
     let brandViewContainer = BrandViewContainerView(frame: .zero)
-    
+    let brandOrder: [Int]
+
     var isInMiddleState = false
     var middleCount = 0
     var middleStart: TimeInterval = -1
+    var brandPosition = 0
     
     // MARK: - UIViewController
     
@@ -61,6 +63,13 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.startButton.titleLabel?.numberOfLines = 0
         self.startButton.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
         self.startButton.backgroundColor = UIColor.black
+        
+        var brandOrder: [Int] = []
+        for i in 0..<32 {
+            brandOrder.append(i)
+        }
+        
+        self.brandOrder = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: brandOrder) as! [Int]
         
         super.init(nibName: nil, bundle: nil)
         
@@ -138,7 +147,13 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         
         self.audioPlayer.stop()
     }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        startButtonTouched(button: self.startButton)
+    }
+
     // MARK: - SCNSceneRendererDelegate
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
@@ -237,7 +252,9 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.brandViewContainer.isHidden = false
         self.isInMiddleState = false
         
-        self.brandViewContainer.showBrand(Int(arc4random_uniform(15)), animated: false)
+        self.brandViewContainer.showBrand(self.brandOrder[self.brandPosition], animated: true)
+        
+        self.brandPosition += 1
     }
     
     @objc
