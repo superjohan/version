@@ -31,8 +31,23 @@ class BrandViewOventus: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
-        }
+        let length = Constants.barLength / 5.0
+        let delay = length / 3.0
+        
+        let logo = self.subviews[0]
+        logo.alpha = 0
+        logo.frame.origin.y = -self.bounds.size.height
+        
+        UIView.animate(withDuration: length, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.1, options: [], animations: {
+            logo.alpha = 1
+            logo.frame = self.bounds
+        }, completion: nil)
+        
+        let slogan = self.subviews[1]
+        slogan.alpha = 0
+        
+        UIView.animate(withDuration: length, delay: delay, options: [ .curveEaseInOut ], animations: {
+            slogan.alpha = 1
+        }, completion: nil)
     }
 }
