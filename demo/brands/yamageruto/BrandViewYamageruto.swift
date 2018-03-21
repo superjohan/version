@@ -31,8 +31,29 @@ class BrandViewYamageruto: UIView, BrandView {
     }
     
     func animateBrand() {
-        for view in self.subviews {
-            view.isHidden = true
-        }
+        let length = Constants.barLength / 6.0
+        let delay = length / 2.0
+        
+        let logo = self.subviews[0]
+        logo.alpha = 0
+        UIView.animate(withDuration: length, delay: delay, options: [ .curveEaseInOut ], animations: {
+            logo.alpha = 1
+        }, completion: nil)
+        
+        let line1 = self.subviews[1]
+        line1.alpha = 0
+        line1.frame.origin.x = -self.bounds.size.width
+        UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseOut ], animations: {
+            line1.alpha = 1
+            line1.frame = self.frame
+        }, completion: nil)
+        
+        let line2 = self.subviews[2]
+        line2.alpha = 0
+        line2.frame.origin.x = self.bounds.size.width
+        UIView.animate(withDuration: length, delay: 0, options: [ .curveEaseOut ], animations: {
+            line2.alpha = 1
+            line2.frame = self.bounds
+        }, completion: nil)
     }
 }
