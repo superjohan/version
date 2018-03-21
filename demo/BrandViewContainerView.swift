@@ -46,8 +46,8 @@ class BrandViewContainerView: UIView {
         self.addSubview(BrandViewUniventa(frame: self.frame))
         self.addSubview(BrandViewVisioland(frame: self.frame))
         self.addSubview(BrandViewWebtraks(frame: self.frame))
-        self.addSubview(BrandViewYamageruto(frame: self.frame))
         self.addSubview(BrandViewXerion(frame: self.frame))
+        self.addSubview(BrandViewYamageruto(frame: self.frame))
         self.addSubview(BrandViewZophario(frame: self.frame))
 
         for view in self.subviews {
