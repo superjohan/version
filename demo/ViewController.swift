@@ -284,6 +284,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         cameraRotateAction.timingMode = cameraMoveAction.timingMode
         self.camera.runAction(cameraRotateAction)
 
+        self.camera.isPaused = true // pause immediately. gotta wait for the demo to start
+        
         scene.rootNode.addChildNode(self.camera)
         
         configureLight(scene)
