@@ -179,7 +179,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     }
     
     fileprivate func start() {
-        self.sceneView.isHidden = false
+        self.startButton.isHidden = true
+        self.sceneView.isHidden = true
         
         self.audioPlayer.play()
         
