@@ -108,7 +108,6 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     }
     
     let testView1 = UIView()
-    let testView2 = UIView()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -131,16 +130,10 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.startButton.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
         
         self.view.addSubview(self.testView1)
-        self.view.addSubview(self.testView2)
         
         self.testView1.frame = self.view.bounds
-        self.testView2.frame = self.view.bounds
-        
         self.testView1.backgroundColor = .red
-        self.testView2.backgroundColor = .green
-        
         self.testView1.isHidden = true
-        self.testView2.isHidden = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -227,7 +220,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     @objc
     fileprivate func showFirstBeatState() {
         self.testView1.isHidden = false
-        self.testView2.isHidden = true
+        self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = true
         self.isInMiddleState = false
     }
@@ -235,7 +228,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     @objc
     fileprivate func showSecondBeatState() {
         self.testView1.isHidden = true
-        self.testView2.isHidden = false
+        self.sceneView.isHidden = false
         self.brandViewContainer.isHidden = true
         self.isInMiddleState = false
     }
@@ -243,7 +236,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     @objc
     fileprivate func showThirdBeatState() {
         self.testView1.isHidden = true
-        self.testView2.isHidden = true
+        self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = false
         self.isInMiddleState = false
         
@@ -255,7 +248,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     @objc
     fileprivate func showMiddleState() {
         self.testView1.isHidden = true
-        self.testView2.isHidden = true
+        self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = false
         self.isInMiddleState = true
     }
@@ -263,7 +256,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     @objc
     fileprivate func endItAll() {
         self.testView1.isHidden = true
-        self.testView2.isHidden = true
+        self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = true
         self.isInMiddleState = false
     }
