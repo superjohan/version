@@ -12,6 +12,7 @@
 		9042B72C2056F88C000DB49A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9042B72B2056F88C000DB49A /* Assets.xcassets */; };
 		9042B72F2056F88C000DB49A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9042B72D2056F88C000DB49A /* LaunchScreen.storyboard */; };
 		90C8364A20680C640047D3D1 /* SceneKitUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C8364920680C640047D3D1 /* SceneKitUtils.swift */; };
+		90C83652206812BA0047D3D1 /* gear.dae in Resources */ = {isa = PBXBuildFile; fileRef = 90C83651206812BA0047D3D1 /* gear.dae */; };
 		90D241C0205D42690086B982 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90D241BF205D42690086B982 /* audio.mp3 */; };
 		90D241C2205D4ED40086B982 /* BrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D241C1205D4ED40086B982 /* BrandView.swift */; };
 		90D241C4205D4F200086B982 /* BrandViewContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D241C3205D4F200086B982 /* BrandViewContainerView.swift */; };
@@ -93,6 +94,7 @@
 		9042B72E2056F88C000DB49A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9042B7302056F88C000DB49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C8364920680C640047D3D1 /* SceneKitUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitUtils.swift; sourceTree = "<group>"; };
+		90C83651206812BA0047D3D1 /* gear.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = gear.dae; sourceTree = "<group>"; };
 		90D241BF205D42690086B982 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
 		90D241C1205D4ED40086B982 /* BrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandView.swift; sourceTree = "<group>"; };
 		90D241C3205D4F200086B982 /* BrandViewContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewContainerView.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				9042B72D2056F88C000DB49A /* LaunchScreen.storyboard */,
 				9042B7302056F88C000DB49A /* Info.plist */,
 				90D241BF205D42690086B982 /* audio.mp3 */,
+				90C83651206812BA0047D3D1 /* gear.dae */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				90FF05562067BF6A00B46575 /* noise.shader.fragment in Resources */,
 				90FAEEEE205D53EA00C4BCD1 /* Media.xcassets in Resources */,
 				90F62A76205ECDEB002FE66B /* Media.xcassets in Resources */,
+				90C83652206812BA0047D3D1 /* gear.dae in Resources */,
 				90F2D32C205EF1B800419813 /* Media.xcassets in Resources */,
 				90FAEF25205D716800C4BCD1 /* Media.xcassets in Resources */,
 				90F2D322205EED6000419813 /* Media.xcassets in Resources */,
