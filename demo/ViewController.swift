@@ -224,8 +224,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     
     @objc
     fileprivate func showFirstBeatState() {
+        animateGearScene(camera: self.gearCamera)
         self.gearView.isHidden = false
-        animateGearScene()
         
         self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = true

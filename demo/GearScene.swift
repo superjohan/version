@@ -18,7 +18,7 @@ func createGearSceneCamera() -> SCNCamera {
     camera.vignettingIntensity = 1.0
     camera.vignettingPower = 1.0
     camera.colorFringeStrength = 3
-    camera.motionBlurIntensity = 2
+    camera.motionBlurIntensity = 1.5
     
     return camera
 }
@@ -45,14 +45,50 @@ func createGearScene(camera: SCNNode) -> SCNScene {
     return scene
 }
 
-func animateGearScene() {
-    let rotateAction1 = SCNAction.rotateBy(x: 0, y: 0, z: CGFloat.pi / 4, duration: Constants.beatLength / 2)
+fileprivate var positionIndex = 0
+fileprivate let cameraPositions = [
+    (position: SCNVector3Make(0, 0, 30), rotation: SCNVector4Make(0, 0, 0, 0)),
+    (position: SCNVector3Make(10, 0, 30), rotation: SCNVector4Make(0, 0.01, 0, 0.25)),
+    (position: SCNVector3Make(10, 10, 30), rotation: SCNVector4Make(-0.1, 0.05, 0, 0.25)),
+    (position: SCNVector3Make(0, 10, 30), rotation: SCNVector4Make(-0.1, 0, 0, 0.25)),
+    (position: SCNVector3Make(0, 0, 30), rotation: SCNVector4Make(0, 0, 0, 0)),
+    (position: SCNVector3Make(0, -10, 30), rotation: SCNVector4Make(0.1, 0, 0, 0.25)),
+    (position: SCNVector3Make(10, -10, 30), rotation: SCNVector4Make(0.1, 0.05, 0, 0.25)),
+    (position: SCNVector3Make(10, 0, 30), rotation: SCNVector4Make(0, 0.01, 0, 0.25)),
+    (position: SCNVector3Make(0, 0, 30), rotation: SCNVector4Make(0, 0, 0, 0)),
+    (position: SCNVector3Make(-10, 0, 30), rotation: SCNVector4Make(0, -0.05, 0, 0.25)),
+    (position: SCNVector3Make(-10, -10, 30), rotation: SCNVector4Make(0.1, -0.05, 0, 0.25)),
+    (position: SCNVector3Make(0, -10, 30), rotation: SCNVector4Make(0.1, 0, 0, 0.25)),
+    (position: SCNVector3Make(0, 0, 30), rotation: SCNVector4Make(0, 0, 0, 0)),
+    (position: SCNVector3Make(0, 10, 30), rotation: SCNVector4Make(-0.1, 0, 0, 0.25)),
+    (position: SCNVector3Make(-10, 10, 30), rotation: SCNVector4Make(-0.1, -0.05, 0, 0.25)),
+    (position: SCNVector3Make(-10, 0, 30), rotation: SCNVector4Make(0, -0.05, 0, 0.25)),
+]
+
+func animateGearScene(camera: SCNNode) {
+    let duration = Constants.beatLength / 2
+    
+    let cameraPositionAction = SCNAction.move(to: cameraPositions[positionIndex].position, duration: duration)
+    cameraPositionAction.timingMode = .easeOut
+    camera.runAction(cameraPositionAction)
+
+    let cameraRotateAction = SCNAction.rotate(toAxisAngle: cameraPositions[positionIndex].rotation, duration: duration)
+    cameraRotateAction.timingMode = .easeOut
+    camera.runAction(cameraRotateAction)
+
+    let rotateAction1 = SCNAction.rotateBy(x: 0, y: 0, z: CGFloat.pi / 4, duration: duration)
     rotateAction1.timingMode = .easeOut
     gearNode1.runAction(rotateAction1)
 
-    let rotateAction2 = SCNAction.rotateBy(x: 0, y: 0, z: -CGFloat.pi / 4, duration: Constants.beatLength / 2)
+    let rotateAction2 = SCNAction.rotateBy(x: 0, y: 0, z: -CGFloat.pi / 4, duration: duration)
     rotateAction2.timingMode = .easeOut
     gearNode2.runAction(rotateAction2)
+    
+    positionIndex += 1
+    
+    if positionIndex >= cameraPositions.count {
+        positionIndex = 0
+    }
 }
 
 fileprivate func configureLight(_ scene: SCNScene) {
