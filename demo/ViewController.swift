@@ -20,10 +20,13 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     let qtFoolingBgView: UIView = UIView.init(frame: CGRect.zero)
     let brandViewContainer = BrandViewContainerView(frame: .zero)
     let brandOrder: [Int]
-
+    
+    let middleView = SCNView()
+    let middleCamera = SCNNode()
     var isInMiddleState = false
     var middleCount = 0
     var middleStart: TimeInterval = -1
+
     var brandPosition = 0
     
     // MARK: - UIViewController
@@ -48,6 +51,11 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         camera.bloomBlurRadius = 20
         camera.wantsHDR = true
         self.mainCamera.camera = camera
+        
+        let camera2 = SCNCamera()
+        camera2.zFar = 200
+        camera2.colorFringeStrength = 3
+        self.middleCamera.camera = camera2
         
         let startButtonText =
             "\"version\"\n" +
@@ -87,6 +95,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         
         self.view.addSubview(self.sceneView)
         self.view.addSubview(self.brandViewContainer)
+        self.view.addSubview(self.middleView)
         
         self.view.addSubview(self.startButton)
     }
@@ -119,7 +128,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
             height: 2
         )
         
-        self.sceneView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
+        self.sceneView.frame = self.view.bounds
         self.sceneView.isPlaying = true
         self.sceneView.isHidden = true
         
@@ -127,7 +136,12 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.brandViewContainer.isHidden = true
         self.brandViewContainer.adjustFrames()
         
-        self.startButton.frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
+        self.middleView.scene = createMiddleScene(camera: self.middleCamera, size: self.view.bounds.size)
+        self.middleView.frame = self.view.bounds
+        self.middleView.isHidden = true
+        self.middleView.isPlaying = false
+
+        self.startButton.frame = self.view.bounds
         
         self.view.addSubview(self.testView1)
         
@@ -224,6 +238,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = true
         self.isInMiddleState = false
+        self.middleView.isHidden = true
+        self.middleView.isPlaying = false
 
         self.mainCamera.isPaused = true
     }
@@ -234,6 +250,9 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.sceneView.isHidden = false
         self.brandViewContainer.isHidden = true
         self.isInMiddleState = false
+        self.middleView.isHidden = true
+        self.middleView.isPlaying = false
+        self.middleCamera.isPaused = true
 
         self.mainCamera.isPaused = false
     }
@@ -244,6 +263,9 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = false
         self.isInMiddleState = false
+        self.middleView.isHidden = true
+        self.middleView.isPlaying = false
+        self.middleCamera.isPaused = true
 
         self.mainCamera.isPaused = true
 
@@ -258,6 +280,14 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = false
         self.isInMiddleState = true
+        
+        self.middleView.isHidden = false
+        self.middleView.isPlaying = true
+        self.middleCamera.isPaused = false
+        
+        UIView.animate(withDuration: Constants.barLength * 4, animations: {
+            self.middleView.alpha = 0.25
+        })
     }
     
     @objc
@@ -266,6 +296,9 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = true
         self.isInMiddleState = false
+        self.middleView.isHidden = true
+        self.middleView.isPlaying = false
+        self.middleCamera.isPaused = true
     }
     
     fileprivate func showNextBrand() {

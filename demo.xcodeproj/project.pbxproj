@@ -79,6 +79,9 @@
 		90FAEF27205D717500C4BCD1 /* BrandViewYamageruto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF26205D717500C4BCD1 /* BrandViewYamageruto.swift */; };
 		90FAEF2A205D739F00C4BCD1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FAEF29205D739F00C4BCD1 /* Media.xcassets */; };
 		90FAEF2C205D73A800C4BCD1 /* BrandViewUltrox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FAEF2B205D73A800C4BCD1 /* BrandViewUltrox.swift */; };
+		90FF05522067B83D00B46575 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF05512067B83D00B46575 /* MainScene.swift */; };
+		90FF05542067B8E500B46575 /* MiddleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF05532067B8E500B46575 /* MiddleScene.swift */; };
+		90FF05562067BF6A00B46575 /* noise.shader.fragment in Resources */ = {isa = PBXBuildFile; fileRef = 90FF05552067BF6A00B46575 /* noise.shader.fragment */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +159,9 @@
 		90FAEF26205D717500C4BCD1 /* BrandViewYamageruto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewYamageruto.swift; sourceTree = "<group>"; };
 		90FAEF29205D739F00C4BCD1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		90FAEF2B205D73A800C4BCD1 /* BrandViewUltrox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewUltrox.swift; sourceTree = "<group>"; };
+		90FF05512067B83D00B46575 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
+		90FF05532067B8E500B46575 /* MiddleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleScene.swift; sourceTree = "<group>"; };
+		90FF05552067BF6A00B46575 /* noise.shader.fragment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = noise.shader.fragment; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +200,9 @@
 				90D241C1205D4ED40086B982 /* BrandView.swift */,
 				90D241C3205D4F200086B982 /* BrandViewContainerView.swift */,
 				90FAEF1C205D65FE00C4BCD1 /* Constants.swift */,
+				90FF05512067B83D00B46575 /* MainScene.swift */,
+				90FF05532067B8E500B46575 /* MiddleScene.swift */,
+				90FF05552067BF6A00B46575 /* noise.shader.fragment */,
 				9042B72B2056F88C000DB49A /* Assets.xcassets */,
 				9042B72D2056F88C000DB49A /* LaunchScreen.storyboard */,
 				9042B7302056F88C000DB49A /* Info.plist */,
@@ -602,6 +611,7 @@
 				90F2D31D205EE8C400419813 /* Media.xcassets in Resources */,
 				90FAEF20205D6CC500C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEE6205D53D300C4BCD1 /* Media.xcassets in Resources */,
+				90FF05562067BF6A00B46575 /* noise.shader.fragment in Resources */,
 				90FAEEEE205D53EA00C4BCD1 /* Media.xcassets in Resources */,
 				90F62A76205ECDEB002FE66B /* Media.xcassets in Resources */,
 				90F2D32C205EF1B800419813 /* Media.xcassets in Resources */,
@@ -659,6 +669,7 @@
 				90FAEF19205D562E00C4BCD1 /* BrandViewMurtelio.swift in Sources */,
 				90F62A78205ECDF5002FE66B /* BrandViewEkrom.swift in Sources */,
 				90FAEF1D205D65FE00C4BCD1 /* Constants.swift in Sources */,
+				90FF05542067B8E500B46575 /* MiddleScene.swift in Sources */,
 				90FAEF15205D561B00C4BCD1 /* BrandViewKreaten.swift in Sources */,
 				90F62A7D205ECF56002FE66B /* BrandViewOeland.swift in Sources */,
 				90FAEF17205D562500C4BCD1 /* BrandViewLateqniq.swift in Sources */,
@@ -668,6 +679,7 @@
 				90FAEF12205D560C00C4BCD1 /* BrandViewJoolenta.swift in Sources */,
 				90F2D329205EEF1400419813 /* BrandViewVisioland.swift in Sources */,
 				90F2D31A205EE75700419813 /* BrandViewQuantifex.swift in Sources */,
+				90FF05522067B83D00B46575 /* MainScene.swift in Sources */,
 				90F62A6E205ECBE3002FE66B /* BrandViewXerion.swift in Sources */,
 				90F62A83205ED085002FE66B /* BrandViewOventus.swift in Sources */,
 			);
