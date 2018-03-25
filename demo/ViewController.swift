@@ -15,7 +15,7 @@ import GameplayKit
 class ViewController: UIViewController, SCNSceneRendererDelegate {
     let audioPlayer: AVAudioPlayer
     let sceneView = SCNView()
-    let camera = SCNNode()
+    let mainCamera = SCNNode()
     let startButton: UIButton
     let qtFoolingBgView: UIView = UIView.init(frame: CGRect.zero)
     let brandViewContainer = BrandViewContainerView(frame: .zero)
@@ -47,7 +47,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         camera.bloomIntensity = 1
         camera.bloomBlurRadius = 20
         camera.wantsHDR = true
-        self.camera.camera = camera // lol
+        self.mainCamera.camera = camera
         
         let startButtonText =
             "\"version\"\n" +
@@ -225,7 +225,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.brandViewContainer.isHidden = true
         self.isInMiddleState = false
 
-        self.camera.isPaused = true
+        self.mainCamera.isPaused = true
     }
     
     @objc
@@ -235,7 +235,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.brandViewContainer.isHidden = true
         self.isInMiddleState = false
 
-        self.camera.isPaused = false
+        self.mainCamera.isPaused = false
     }
     
     @objc
@@ -245,7 +245,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.brandViewContainer.isHidden = false
         self.isInMiddleState = false
 
-        self.camera.isPaused = true
+        self.mainCamera.isPaused = true
 
         self.brandViewContainer.showBrand(self.brandOrder[self.brandPosition], animated: true)
         
@@ -272,21 +272,21 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         let scene = SCNScene()
         scene.background.contents = UIColor.black
         
-        self.camera.position = SCNVector3Make(-50, 60, 100)
-        self.camera.rotation = SCNVector4Make(1, 1, 0, -0.4)
+        self.mainCamera.position = SCNVector3Make(-50, 60, 100)
+        self.mainCamera.rotation = SCNVector4Make(1, 1, 0, -0.4)
         let duration: TimeInterval = Constants.beatLength * 32
         
         let cameraMoveAction = SCNAction.move(to: SCNVector3Make(-40, 10, 0), duration: duration)
         cameraMoveAction.timingMode = SCNActionTimingMode.easeInEaseOut
-        self.camera.runAction(cameraMoveAction)
+        self.mainCamera.runAction(cameraMoveAction)
         
         let cameraRotateAction = SCNAction.rotateBy(x: 0.4, y: -1.3, z: 0, duration: duration)
         cameraRotateAction.timingMode = cameraMoveAction.timingMode
-        self.camera.runAction(cameraRotateAction)
+        self.mainCamera.runAction(cameraRotateAction)
 
-        self.camera.isPaused = true // pause immediately. gotta wait for the demo to start
+        self.mainCamera.isPaused = true // pause immediately. gotta wait for the demo to start
         
-        scene.rootNode.addChildNode(self.camera)
+        scene.rootNode.addChildNode(self.mainCamera)
         
         configureLight(scene)
         
