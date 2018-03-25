@@ -42,20 +42,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
             abort()
         }
         
-        let camera = SCNCamera()
-        camera.zFar = 600
-        camera.vignettingIntensity = 1
-        camera.vignettingPower = 1
-        camera.colorFringeStrength = 3
-        camera.bloomIntensity = 1
-        camera.bloomBlurRadius = 20
-        camera.wantsHDR = true
-        self.mainCamera.camera = camera
-        
-        let camera2 = SCNCamera()
-        camera2.zFar = 200
-        camera2.colorFringeStrength = 3
-        self.middleCamera.camera = camera2
+        self.mainCamera.camera = createMainSceneCamera()
+        self.middleCamera.camera = createMiddleSceneCamera()
         
         let startButtonText =
             "\"version\"\n" +

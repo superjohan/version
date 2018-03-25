@@ -9,6 +9,14 @@
 import Foundation
 import SceneKit
 
+func createMiddleSceneCamera() -> SCNCamera {
+    let camera = SCNCamera()
+    camera.zFar = 200
+    camera.colorFringeStrength = 3
+    
+    return camera
+}
+
 func createMiddleScene(camera: SCNNode, size: CGSize) -> SCNScene {
     let scene = SCNScene()
     scene.background.contents = UIColor.black

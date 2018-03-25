@@ -9,6 +9,19 @@
 import Foundation
 import SceneKit
 
+func createMainSceneCamera() -> SCNCamera {
+    let camera = SCNCamera()
+    camera.zFar = 600
+    camera.vignettingIntensity = 1
+    camera.vignettingPower = 1
+    camera.colorFringeStrength = 3
+    camera.bloomIntensity = 1
+    camera.bloomBlurRadius = 20
+    camera.wantsHDR = true
+    
+    return camera
+}
+
 func createMainScene(camera: SCNNode) -> SCNScene {
     let scene = SCNScene()
     scene.background.contents = UIColor.black
