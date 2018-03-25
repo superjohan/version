@@ -12,6 +12,7 @@
 		9042B72C2056F88C000DB49A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9042B72B2056F88C000DB49A /* Assets.xcassets */; };
 		9042B72F2056F88C000DB49A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9042B72D2056F88C000DB49A /* LaunchScreen.storyboard */; };
 		90C8364A20680C640047D3D1 /* SceneKitUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C8364920680C640047D3D1 /* SceneKitUtils.swift */; };
+		90C8364E20680DA80047D3D1 /* GearScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C8364D20680DA80047D3D1 /* GearScene.swift */; };
 		90C83652206812BA0047D3D1 /* gear.dae in Resources */ = {isa = PBXBuildFile; fileRef = 90C83651206812BA0047D3D1 /* gear.dae */; };
 		90D241C0205D42690086B982 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90D241BF205D42690086B982 /* audio.mp3 */; };
 		90D241C2205D4ED40086B982 /* BrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D241C1205D4ED40086B982 /* BrandView.swift */; };
@@ -94,6 +95,7 @@
 		9042B72E2056F88C000DB49A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9042B7302056F88C000DB49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C8364920680C640047D3D1 /* SceneKitUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitUtils.swift; sourceTree = "<group>"; };
+		90C8364D20680DA80047D3D1 /* GearScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearScene.swift; sourceTree = "<group>"; };
 		90C83651206812BA0047D3D1 /* gear.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = gear.dae; sourceTree = "<group>"; };
 		90D241BF205D42690086B982 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
 		90D241C1205D4ED40086B982 /* BrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				90FAEF1C205D65FE00C4BCD1 /* Constants.swift */,
 				90FF05512067B83D00B46575 /* MainScene.swift */,
 				90FF05532067B8E500B46575 /* MiddleScene.swift */,
+				90C8364D20680DA80047D3D1 /* GearScene.swift */,
 				90C8364920680C640047D3D1 /* SceneKitUtils.swift */,
 				90FF05552067BF6A00B46575 /* noise.shader.fragment */,
 				9042B72B2056F88C000DB49A /* Assets.xcassets */,
@@ -684,6 +687,7 @@
 				90FAEF22205D6CD600C4BCD1 /* BrandViewPreolio.swift in Sources */,
 				90FAEF2C205D73A800C4BCD1 /* BrandViewUltrox.swift in Sources */,
 				90D241C4205D4F200086B982 /* BrandViewContainerView.swift in Sources */,
+				90C8364E20680DA80047D3D1 /* GearScene.swift in Sources */,
 				90FAEF12205D560C00C4BCD1 /* BrandViewJoolenta.swift in Sources */,
 				90F2D329205EEF1400419813 /* BrandViewVisioland.swift in Sources */,
 				90F2D31A205EE75700419813 /* BrandViewQuantifex.swift in Sources */,

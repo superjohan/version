@@ -21,6 +21,9 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     let brandViewContainer = BrandViewContainerView(frame: .zero)
     let brandOrder: [Int]
     
+    let gearView = SCNView()
+    let gearCamera = SCNNode()
+    
     let middleView = SCNView()
     let middleCamera = SCNNode()
     var isInMiddleState = false
@@ -44,6 +47,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         
         self.mainCamera.camera = createMainSceneCamera()
         self.middleCamera.camera = createMiddleSceneCamera()
+        self.gearCamera.camera = createGearSceneCamera()
         
         let startButtonText =
             "\"version\"\n" +
@@ -84,6 +88,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.view.addSubview(self.sceneView)
         self.view.addSubview(self.brandViewContainer)
         self.view.addSubview(self.middleView)
+        self.view.addSubview(self.gearView)
         
         self.view.addSubview(self.startButton)
     }
@@ -102,9 +107,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.audioPlayer.prepareToPlay()
         
         self.sceneView.scene = createMainScene(camera: self.mainCamera)
+        self.gearView.scene = createGearScene(camera: self.gearCamera)
     }
-    
-    let testView1 = UIView()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -129,13 +133,11 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.middleView.isHidden = true
         self.middleView.isPlaying = false
 
+        self.gearView.scene = createGearScene(camera: self.gearCamera)
+        self.gearView.frame = self.view.bounds
+        self.gearView.isHidden = true
+        
         self.startButton.frame = self.view.bounds
-        
-        self.view.addSubview(self.testView1)
-        
-        self.testView1.frame = self.view.bounds
-        self.testView1.backgroundColor = .red
-        self.testView1.isHidden = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -222,7 +224,9 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     
     @objc
     fileprivate func showFirstBeatState() {
-        self.testView1.isHidden = false
+        self.gearView.isHidden = false
+        animateGearScene()
+        
         self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = true
         self.isInMiddleState = false
@@ -234,7 +238,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     
     @objc
     fileprivate func showSecondBeatState() {
-        self.testView1.isHidden = true
+        self.gearView.isHidden = true
         self.sceneView.isHidden = false
         self.brandViewContainer.isHidden = true
         self.isInMiddleState = false
@@ -247,7 +251,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     
     @objc
     fileprivate func showThirdBeatState() {
-        self.testView1.isHidden = true
+        self.gearView.isHidden = true
         self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = false
         self.isInMiddleState = false
@@ -264,7 +268,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     
     @objc
     fileprivate func showMiddleState() {
-        self.testView1.isHidden = true
+        self.gearView.isHidden = true
         self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = false
         self.isInMiddleState = true
@@ -280,7 +284,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     
     @objc
     fileprivate func endItAll() {
-        self.testView1.isHidden = true
+        self.gearView.isHidden = true
         self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = true
         self.isInMiddleState = false
