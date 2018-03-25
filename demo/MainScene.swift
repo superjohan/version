@@ -15,7 +15,7 @@ func createMainSceneCamera() -> SCNCamera {
     camera.vignettingIntensity = 1
     camera.vignettingPower = 1
     camera.colorFringeStrength = 3
-    camera.bloomIntensity = 1
+    camera.bloomIntensity = 0.5
     camera.bloomBlurRadius = 20
     camera.wantsHDR = true
     
@@ -30,11 +30,11 @@ func createMainScene(camera: SCNNode) -> SCNScene {
     camera.rotation = SCNVector4Make(1, 1, 0, -0.4)
     let duration: TimeInterval = Constants.beatLength * 32
     
-    let cameraMoveAction = SCNAction.move(to: SCNVector3Make(-40, 10, 0), duration: duration)
+    let cameraMoveAction = SCNAction.move(to: SCNVector3Make(-60, 30, 0), duration: duration)
     cameraMoveAction.timingMode = SCNActionTimingMode.easeInEaseOut
     camera.runAction(cameraMoveAction)
     
-    let cameraRotateAction = SCNAction.rotateBy(x: 0.4, y: -1.3, z: 0, duration: duration)
+    let cameraRotateAction = SCNAction.rotateBy(x: 0.1, y: -1.3, z: 0, duration: duration)
     cameraRotateAction.timingMode = cameraMoveAction.timingMode
     camera.runAction(cameraRotateAction)
     
@@ -44,30 +44,15 @@ func createMainScene(camera: SCNNode) -> SCNScene {
     
     configureLight(scene)
     
-    let box = SCNBox(width: 20, height: 20, length: 20, chamferRadius: 0)
-    box.firstMaterial?.diffuse.contents = UIColor.white
+    let factory = loadModel(name: "tehdas", textureName: nil, color: UIColor.init(white: 0.8, alpha: 1.0))
+    factory.scale = SCNVector3Make(3, 3, 3)
+    scene.rootNode.addChildNode(factory)
     
-    let boxNode = SCNNode(geometry: box)
-    boxNode.position = SCNVector3Make(0, 20, 0)
-    
-    boxNode.runAction(
-        SCNAction.repeatForever(
-            SCNAction.rotateBy(
-                x: CGFloat(-10 + Int(arc4random_uniform(20))),
-                y: CGFloat(-10 + Int(arc4random_uniform(20))),
-                z: CGFloat(-10 + Int(arc4random_uniform(20))),
-                duration: TimeInterval(8 + arc4random_uniform(5))
-            )
-        )
-    )
-    
-    scene.rootNode.addChildNode(boxNode)
-    
-    let box2 = SCNBox(width: 20, height: 100, length: 20, chamferRadius: 0)
+    let box2 = SCNBox(width: 200, height: 100, length: 200, chamferRadius: 0)
     box2.firstMaterial?.diffuse.contents = UIColor.gray
     
     let boxNode2 = SCNNode(geometry: box2)
-    boxNode2.position = SCNVector3Make(0, -50, 0)
+    boxNode2.position = SCNVector3Make(0, -51, 0)
     
     scene.rootNode.addChildNode(boxNode2)
     
