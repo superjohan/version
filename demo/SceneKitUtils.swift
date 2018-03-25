@@ -10,7 +10,7 @@ import Foundation
 import SceneKit
 
 func loadModel(name: String, textureName: String?) -> SCNNode {
-    guard let filePath = Bundle.main.path(forResource: "paatti", ofType: "dae", inDirectory: "") else { abort() }
+    guard let filePath = Bundle.main.path(forResource: name, ofType: "dae", inDirectory: "") else { abort() }
     let referenceURL = URL(fileURLWithPath: filePath)
     guard let referenceNode = SCNReferenceNode(url: referenceURL) else { abort() }
     referenceNode.load()
