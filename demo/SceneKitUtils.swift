@@ -9,7 +9,7 @@
 import Foundation
 import SceneKit
 
-func loadModel(name: String, textureName: String?) -> SCNNode {
+func loadModel(name: String, textureName: String?, color: UIColor?) -> SCNNode {
     guard let filePath = Bundle.main.path(forResource: name, ofType: "dae", inDirectory: "") else { abort() }
     let referenceURL = URL(fileURLWithPath: filePath)
     guard let referenceNode = SCNReferenceNode(url: referenceURL) else { abort() }
@@ -21,6 +21,12 @@ func loadModel(name: String, textureName: String?) -> SCNNode {
         for childNode in childNodes {
             childNode.geometry?.firstMaterial = SCNMaterial()
             childNode.geometry?.firstMaterial?.diffuse.contents = boatImage
+        }
+    } else if let color = color {
+        let childNodes = referenceNode.childNodes
+        for childNode in childNodes {
+            childNode.geometry?.firstMaterial = SCNMaterial()
+            childNode.geometry?.firstMaterial?.diffuse.contents = color
         }
     }
     
