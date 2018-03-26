@@ -13,7 +13,6 @@ func createMiddleSceneCamera() -> SCNCamera {
     let camera = SCNCamera()
     camera.zFar = 400
     camera.colorFringeStrength = 6
-    camera.motionBlurIntensity = 1.5
 
     return camera
 }
