@@ -136,8 +136,9 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.middleView.isHidden = true
         self.middleView.isPlaying = false
 
+        self.middleOverlay.alpha = 1
         self.middleOverlay.isHidden = true
-        self.middleOverlay.backgroundColor = .gray
+        self.middleOverlay.backgroundColor = .white
         self.middleOverlay.frame = self.middleView.bounds
         
         self.gearView.scene = createGearScene(camera: self.gearCamera)
@@ -273,6 +274,15 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
 
         self.brandViewContainer.showBrand(self.brandOrder[self.brandPosition], animated: true)
         
+        if (self.brandPosition == 15) {
+            self.middleView.alpha = 0
+            self.middleView.isHidden = false
+            
+            UIView.animate(withDuration: Constants.beatLength * 0.5, delay: Constants.beatLength * 1.5, options: [ .curveEaseIn ], animations: {
+                self.middleView.alpha = 0.25
+            }, completion: nil)
+        }
+        
         self.brandPosition += 1
     }
     
@@ -285,6 +295,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         
         self.middleView.isHidden = false
         self.middleView.isPlaying = true
+        self.middleView.alpha = 1
         self.middleCamera.isPaused = false
         
         UIView.animate(withDuration: Constants.barLength * 4, animations: {
