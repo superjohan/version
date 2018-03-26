@@ -265,20 +265,33 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.sceneView.isHidden = true
         self.brandViewContainer.isHidden = false
         self.isInMiddleState = false
-        self.middleView.isHidden = true
-        self.middleView.isPlaying = false
-        self.middleCamera.isPaused = true
-        self.middleOverlay.isHidden = true
 
+        if self.brandPosition < 16 {
+            self.middleView.isHidden = true
+            self.middleView.isPlaying = false
+            self.middleCamera.isPaused = true
+        } else {
+            self.middleView.isHidden = false
+            self.middleView.isPlaying = true
+            self.middleCamera.isPaused = false
+        }
+
+        self.middleOverlay.isHidden = true
         self.mainCamera.isPaused = true
 
         self.brandViewContainer.showBrand(self.brandOrder[self.brandPosition], animated: true)
         
-        if (self.brandPosition == 15) {
+        if self.brandPosition == 15 {
             self.middleView.alpha = 0
             self.middleView.isHidden = false
             
             UIView.animate(withDuration: Constants.beatLength * 0.5, delay: Constants.beatLength * 1.5, options: [ .curveEaseIn ], animations: {
+                self.middleView.alpha = 0.25
+            }, completion: nil)
+        } else if self.brandPosition == 16 {
+            self.middleView.alpha = 0
+            
+            UIView.animate(withDuration: Constants.barLength * 16, delay: 0, options: [ .curveEaseIn ], animations: {
                 self.middleView.alpha = 0.25
             }, completion: nil)
         }
