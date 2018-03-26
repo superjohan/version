@@ -11,9 +11,10 @@ import SceneKit
 
 func createMiddleSceneCamera() -> SCNCamera {
     let camera = SCNCamera()
-    camera.zFar = 200
-    camera.colorFringeStrength = 3
-    
+    camera.zFar = 400
+    camera.colorFringeStrength = 6
+    camera.motionBlurIntensity = 1.5
+
     return camera
 }
 
@@ -28,21 +29,21 @@ func createMiddleScene(camera: SCNNode, size: CGSize) -> SCNScene {
 
     configureLight(scene)
     
-    let backgroundBox = SCNBox(width: 200, height: 200, length: 200, chamferRadius: 0)
+    let backgroundBox = SCNBox(width: 900, height: 500, length: 10, chamferRadius: 0)
     applyNoiseShader(object: backgroundBox, scale: 50, size: size)
 
     let backgroundBoxNode = SCNNode(geometry: backgroundBox)
-    backgroundBoxNode.position = SCNVector3Make(0, 0, -100)
+    backgroundBoxNode.position = SCNVector3Make(0, 0, -300)
     
     scene.rootNode.addChildNode(backgroundBoxNode)
 
-    let box = SCNBox(width: 20, height: 20, length: 20, chamferRadius: 0)
-    box.firstMaterial?.diffuse.contents = UIColor.init(white: 0, alpha: 0.5)
+    let factory = loadModel(name: "tehdas", textureName: nil, color: UIColor.init(white: 0.4, alpha: 1))
+    factory.scale = SCNVector3Make(2.5, 2.5, 2.5)
+    factory.position = SCNVector3Make(0, -8, 0)
+    factory.pivot = SCNMatrix4MakeTranslation(8, 0, 0)
+    scene.rootNode.addChildNode(factory)
 
-    let boxNode = SCNNode(geometry: box)
-    boxNode.position = SCNVector3Make(0, 0, 0)
-
-    boxNode.runAction(
+    factory.runAction(
         SCNAction.repeatForever(
             SCNAction.rotateBy(
                 x: 0,
@@ -53,17 +54,14 @@ func createMiddleScene(camera: SCNNode, size: CGSize) -> SCNScene {
         )
     )
 
-    scene.rootNode.addChildNode(boxNode)
-
     return scene
 }
 
 fileprivate func configureLight(_ scene: SCNScene) {
     let lightNode = SCNNode()
     lightNode.light = SCNLight()
-    lightNode.light?.type = SCNLight.LightType.omni
+    lightNode.light?.type = SCNLight.LightType.ambient
     lightNode.light?.color = UIColor(white: 1.0, alpha: 1.0)
-    lightNode.position = SCNVector3Make(0, 0, 50)
     scene.rootNode.addChildNode(lightNode)
 }
 
@@ -77,4 +75,3 @@ fileprivate func applyNoiseShader(object: SCNGeometry, scale: Float, size: CGSiz
     object.firstMaterial?.setValue(CGPoint(x: size.width, y: size.width), forKey: "resolution")
     object.firstMaterial?.setValue(scale, forKey: "scale")
 }
-
