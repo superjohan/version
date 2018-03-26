@@ -24,13 +24,13 @@ func createMainSceneCamera() -> SCNCamera {
 
 func createMainScene(camera: SCNNode) -> SCNScene {
     let scene = SCNScene()
-    scene.background.contents = UIColor.black
+    scene.background.contents = UIColor.init(white: 0.42, alpha: 1)
     
-    camera.position = SCNVector3Make(-50, 60, 100)
-    camera.rotation = SCNVector4Make(1, 1, 0, -0.4)
+    camera.position = SCNVector3Make(-30, 50, 60)
+    camera.rotation = SCNVector4Make(1.5, 1, 0, -0.4)
     let duration: TimeInterval = Constants.beatLength * 32
     
-    let cameraMoveAction = SCNAction.move(to: SCNVector3Make(-60, 30, 0), duration: duration)
+    let cameraMoveAction = SCNAction.move(to: SCNVector3Make(-70, 30, 0), duration: duration)
     cameraMoveAction.timingMode = SCNActionTimingMode.easeInEaseOut
     camera.runAction(cameraMoveAction)
     
@@ -46,6 +46,7 @@ func createMainScene(camera: SCNNode) -> SCNScene {
     
     let factory = loadModel(name: "tehdas", textureName: nil, color: UIColor.init(white: 0.8, alpha: 1.0))
     factory.scale = SCNVector3Make(3, 3, 3)
+    factory.pivot = SCNMatrix4MakeTranslation(8, 0, 0)
     scene.rootNode.addChildNode(factory)
     
     let box2 = SCNBox(width: 200, height: 100, length: 200, chamferRadius: 0)
@@ -67,8 +68,8 @@ fileprivate func configureLight(_ scene: SCNScene) {
     directionalLightNode.light?.shadowRadius = 30
     directionalLightNode.light?.shadowColor = UIColor(white: 0, alpha: 0.75)
     directionalLightNode.light?.color = UIColor(white: 1.0, alpha: 1.0)
-    directionalLightNode.position = SCNVector3Make(0, 20, 40)
-    directionalLightNode.rotation = SCNVector4Make(1, 0, 0, -0.75)
+    directionalLightNode.position = SCNVector3Make(-10, 20, 40)
+    directionalLightNode.rotation = SCNVector4Make(1, -0.2, 0, -0.75)
     scene.rootNode.addChildNode(directionalLightNode)
     
     let omniLightNode = SCNNode()
