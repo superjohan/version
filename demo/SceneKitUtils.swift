@@ -23,11 +23,17 @@ func loadModel(name: String, textureName: String?, color: UIColor?) -> SCNNode {
             childNode.geometry?.firstMaterial?.diffuse.contents = boatImage
         }
     } else if let color = color {
-        let childNodes = referenceNode.childNodes
-        for childNode in childNodes {
-            childNode.geometry?.firstMaterial = SCNMaterial()
-            childNode.geometry?.firstMaterial?.diffuse.contents = color
+        func setColorInChildnodes(node: SCNNode, color: UIColor) {
+            let childNodes = node.childNodes
+            for childNode in childNodes {
+                childNode.geometry?.firstMaterial = SCNMaterial()
+                childNode.geometry?.firstMaterial?.diffuse.contents = color
+                
+                setColorInChildnodes(node: childNode, color: color)
+            }
         }
+        
+        setColorInChildnodes(node: referenceNode, color: color)
     }
     
     return referenceNode
