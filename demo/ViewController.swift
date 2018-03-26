@@ -26,6 +26,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     
     let middleView = SCNView()
     let middleCamera = SCNNode()
+    let middleOverlay = UIView()
     var isInMiddleState = false
     var middleCount = 0
     var middleStart: TimeInterval = -1
@@ -79,6 +80,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.view.backgroundColor = .black
         self.sceneView.backgroundColor = .black
         self.sceneView.delegate = self
+        self.middleOverlay.backgroundColor = .white
         
         self.qtFoolingBgView.backgroundColor = UIColor(white: 0.1, alpha: 1.0)
         
@@ -88,6 +90,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.view.addSubview(self.sceneView)
         self.view.addSubview(self.brandViewContainer)
         self.view.addSubview(self.middleView)
+        self.view.addSubview(self.middleOverlay)
         self.view.addSubview(self.gearView)
         
         self.view.addSubview(self.startButton)
@@ -133,6 +136,10 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.middleView.isHidden = true
         self.middleView.isPlaying = false
 
+        self.middleOverlay.isHidden = true
+        self.middleOverlay.backgroundColor = .gray
+        self.middleOverlay.frame = self.middleView.bounds
+        
         self.gearView.scene = createGearScene(camera: self.gearCamera)
         self.gearView.frame = self.view.bounds
         self.gearView.isHidden = true
@@ -232,6 +239,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.isInMiddleState = false
         self.middleView.isHidden = true
         self.middleView.isPlaying = false
+        self.middleOverlay.isHidden = true
 
         self.mainCamera.isPaused = true
     }
@@ -245,6 +253,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.middleView.isHidden = true
         self.middleView.isPlaying = false
         self.middleCamera.isPaused = true
+        self.middleOverlay.isHidden = true
 
         self.mainCamera.isPaused = false
     }
@@ -258,6 +267,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.middleView.isHidden = true
         self.middleView.isPlaying = false
         self.middleCamera.isPaused = true
+        self.middleOverlay.isHidden = true
 
         self.mainCamera.isPaused = true
 
@@ -278,7 +288,14 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.middleCamera.isPaused = false
         
         UIView.animate(withDuration: Constants.barLength * 4, animations: {
-            self.middleView.alpha = 0.25
+            self.middleView.alpha = 0
+        })
+        
+        self.middleOverlay.isHidden = false
+
+        UIView.animate(withDuration: Constants.beatLength * 2, animations: {
+            self.middleOverlay.alpha = 0
+            self.middleOverlay.backgroundColor = .white
         })
     }
     
@@ -291,6 +308,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.middleView.isHidden = true
         self.middleView.isPlaying = false
         self.middleCamera.isPaused = true
+        self.middleOverlay.isHidden = true
     }
     
     fileprivate func showNextBrand() {
