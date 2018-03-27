@@ -48,13 +48,13 @@ func createGearScene(camera: SCNNode) -> SCNScene {
 fileprivate var positionIndex = 0
 fileprivate let cameraPositions = [
     (position: SCNVector3Make(0, 0, 30), rotation: SCNVector4Make(0, 0, 0, 0)),
-    (position: SCNVector3Make(10, 0, 30), rotation: SCNVector4Make(0, 0.01, 0, 0.25)),
+    (position: SCNVector3Make(10, 0, 30), rotation: SCNVector4Make(0, 0.05, 0, 0.25)),
     (position: SCNVector3Make(10, 10, 30), rotation: SCNVector4Make(-0.1, 0.05, 0, 0.25)),
     (position: SCNVector3Make(0, 10, 30), rotation: SCNVector4Make(-0.1, 0, 0, 0.25)),
     (position: SCNVector3Make(0, 0, 30), rotation: SCNVector4Make(0, 0, 0, 0)),
     (position: SCNVector3Make(0, -10, 30), rotation: SCNVector4Make(0.1, 0, 0, 0.25)),
     (position: SCNVector3Make(10, -10, 30), rotation: SCNVector4Make(0.1, 0.05, 0, 0.25)),
-    (position: SCNVector3Make(10, 0, 30), rotation: SCNVector4Make(0, 0.01, 0, 0.25)),
+    (position: SCNVector3Make(10, 0, 30), rotation: SCNVector4Make(0, 0.05, 0, 0.25)),
     (position: SCNVector3Make(0, 0, 30), rotation: SCNVector4Make(0, 0, 0, 0)),
     (position: SCNVector3Make(-10, 0, 30), rotation: SCNVector4Make(0, -0.05, 0, 0.25)),
     (position: SCNVector3Make(-10, -10, 30), rotation: SCNVector4Make(0.1, -0.05, 0, 0.25)),
