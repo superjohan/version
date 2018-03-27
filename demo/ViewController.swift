@@ -281,6 +281,10 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
 
         self.brandViewContainer.showBrand(self.brandOrder[self.brandPosition], animated: true)
         
+        if self.brandPosition == 14 {
+            setFactoryHidden(true)
+        }
+        
         if self.brandPosition == 15 {
             self.middleView.alpha = 0
             self.middleView.isHidden = false
@@ -292,7 +296,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
             self.middleView.alpha = 0
             
             UIView.animate(withDuration: Constants.barLength * 16, delay: 0, options: [ .curveEaseIn ], animations: {
-                self.middleView.alpha = 0.25
+                self.middleView.alpha = 0.5
             }, completion: nil)
         }
         
@@ -310,6 +314,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.middleView.isPlaying = true
         self.middleView.alpha = 1
         self.middleCamera.isPaused = false
+        setFactoryHidden(false)
         
         UIView.animate(withDuration: Constants.barLength * 4, animations: {
             self.middleView.alpha = 0

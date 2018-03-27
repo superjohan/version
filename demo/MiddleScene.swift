@@ -9,6 +9,8 @@
 import Foundation
 import SceneKit
 
+fileprivate var factoryNode: SCNNode?
+
 func createMiddleSceneCamera() -> SCNCamera {
     let camera = SCNCamera()
     camera.zFar = 400
@@ -41,7 +43,8 @@ func createMiddleScene(camera: SCNNode, size: CGSize) -> SCNScene {
     factory.position = SCNVector3Make(0, -8, 0)
     factory.pivot = SCNMatrix4MakeTranslation(8, 0, 0)
     scene.rootNode.addChildNode(factory)
-
+    factoryNode = factory
+    
     factory.runAction(
         SCNAction.repeatForever(
             SCNAction.rotateBy(
@@ -54,6 +57,14 @@ func createMiddleScene(camera: SCNNode, size: CGSize) -> SCNScene {
     )
 
     return scene
+}
+
+func setFactoryHidden(_ isHidden: Bool) {
+    if isHidden {
+        factoryNode?.runAction(SCNAction.fadeOut(duration: 0.1))
+    } else {
+        factoryNode?.runAction(SCNAction.fadeIn(duration: 0.1))
+    }
 }
 
 fileprivate func configureLight(_ scene: SCNScene) {
