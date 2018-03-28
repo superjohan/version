@@ -56,6 +56,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
                 "\n" +
                 "programming, music, and graphics by ricky martin\n" +
                 "graphics by jaakko\n" +
+                "main factory model by spiikki\n" +
                 "middle part factory model by zimtis\n" + // from https://www.turbosquid.com/3d-models/fabrik-factory-c4d-free/533477
                 "\n" +
                 "presented at revision 2018\n" +
