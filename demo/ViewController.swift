@@ -146,6 +146,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.gearView.isHidden = true
         
         self.startButton.frame = self.view.bounds
+        
+        centerGearCamera(camera: self.gearCamera)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -257,6 +259,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.middleOverlay.isHidden = true
 
         self.mainCamera.isPaused = false
+        
+        centerGearCamera(camera: self.gearCamera)
     }
     
     @objc
@@ -301,6 +305,10 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         }
         
         self.brandPosition += 1
+        
+        if self.brandPosition % 4 > 0 {
+            resetCameraToGear(camera: self.gearCamera)
+        }
     }
     
     @objc

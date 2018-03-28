@@ -91,6 +91,16 @@ func animateGearScene(camera: SCNNode) {
     gearNode2.runAction(rotateAction2)
 }
 
+func resetCameraToGear(camera: SCNNode) {
+    camera.position = cameraPositions[positionIndex].position
+    camera.rotation = cameraPositions[positionIndex].rotation
+}
+
+func centerGearCamera(camera: SCNNode) {
+    camera.position = SCNVector3Make(0, 0, 0)
+    camera.rotation = SCNVector4Make(0, 0, 0, 0)
+}
+
 fileprivate func configureLight(_ scene: SCNScene) {
     let directionalLightNode = SCNNode()
     directionalLightNode.light = SCNLight()
