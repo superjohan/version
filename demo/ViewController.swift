@@ -51,7 +51,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         self.gearCamera.camera = createGearSceneCamera()
         
         let startButtonText =
-            "\"version\"\n" +
+            "\"version: labor\"\n" +
                 "by dekadence\n" +
                 "\n" +
                 "programming, music, and graphics by ricky martin\n" +
