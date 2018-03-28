@@ -44,9 +44,10 @@ func createMainScene(camera: SCNNode) -> SCNScene {
     
     configureLight(scene)
     
-    let factory = loadModel(name: "tehdas", textureName: nil, color: UIColor.init(white: 0.8, alpha: 1.0))
-    factory.scale = SCNVector3Make(3, 3, 3)
-    factory.pivot = SCNMatrix4MakeTranslation(8, 0, 0)
+    let factory = loadModel(name: "tehras", textureName: nil, color: UIColor.init(white: 0.8, alpha: 1.0))
+    factory.scale = SCNVector3Make(2, 2, 2)
+    factory.rotation = SCNVector4Make(1, 0, 0, -Float.pi / 2)
+    factory.pivot = SCNMatrix4MakeTranslation(50, 10, 0)
     scene.rootNode.addChildNode(factory)
     
     let box2 = SCNBox(width: 200, height: 100, length: 200, chamferRadius: 0)
