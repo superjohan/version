@@ -294,7 +294,7 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
             self.middleView.isHidden = false
             
             UIView.animate(withDuration: Constants.beatLength * 0.5, delay: Constants.beatLength * 1.5, options: [ .curveEaseIn ], animations: {
-                self.middleView.alpha = 0.25
+                self.middleView.alpha = 0.75
             }, completion: nil)
         } else if self.brandPosition == 16 {
             self.middleView.alpha = 0
