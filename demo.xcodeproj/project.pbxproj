@@ -18,6 +18,7 @@
 		90D241C0205D42690086B982 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90D241BF205D42690086B982 /* audio.mp3 */; };
 		90D241C2205D4ED40086B982 /* BrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D241C1205D4ED40086B982 /* BrandView.swift */; };
 		90D241C4205D4F200086B982 /* BrandViewContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D241C3205D4F200086B982 /* BrandViewContainerView.swift */; };
+		90DBC5CC206BED1A00B0A651 /* tehras.dae in Resources */ = {isa = PBXBuildFile; fileRef = 90DBC5CB206BED1A00B0A651 /* tehras.dae */; };
 		90F2D313205EE63F00419813 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D312205EE63F00419813 /* Media.xcassets */; };
 		90F2D315205EE64900419813 /* BrandViewNeandertek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D314205EE64900419813 /* BrandViewNeandertek.swift */; };
 		90F2D318205EE74A00419813 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D317205EE74A00419813 /* Media.xcassets */; };
@@ -102,6 +103,7 @@
 		90D241BF205D42690086B982 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
 		90D241C1205D4ED40086B982 /* BrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandView.swift; sourceTree = "<group>"; };
 		90D241C3205D4F200086B982 /* BrandViewContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewContainerView.swift; sourceTree = "<group>"; };
+		90DBC5CB206BED1A00B0A651 /* tehras.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = tehras.dae; sourceTree = "<group>"; };
 		90F2D312205EE63F00419813 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		90F2D314205EE64900419813 /* BrandViewNeandertek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewNeandertek.swift; sourceTree = "<group>"; };
 		90F2D317205EE74A00419813 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				90D241BF205D42690086B982 /* audio.mp3 */,
 				90C83651206812BA0047D3D1 /* gear.dae */,
 				90C83653206828DB0047D3D1 /* tehdas.dae */,
+				90DBC5CB206BED1A00B0A651 /* tehras.dae */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				90FAEEE2205D53C600C4BCD1 /* Media.xcassets in Resources */,
 				90F2D313205EE63F00419813 /* Media.xcassets in Resources */,
 				90F62A81205ED07B002FE66B /* Media.xcassets in Resources */,
+				90DBC5CC206BED1A00B0A651 /* tehras.dae in Resources */,
 				90FAEEF4205D540300C4BCD1 /* Media.xcassets in Resources */,
 				90FAEEFA205D541300C4BCD1 /* Media.xcassets in Resources */,
 				90C83654206828DB0047D3D1 /* tehdas.dae in Resources */,
