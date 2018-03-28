@@ -45,7 +45,7 @@ func createGearScene(camera: SCNNode) -> SCNScene {
     return scene
 }
 
-fileprivate var positionIndex = 0
+fileprivate var positionIndex = -1
 fileprivate let cameraPositions = [
     (position: SCNVector3Make(0, 0, 30), rotation: SCNVector4Make(0, 0, 0, 0)),
     (position: SCNVector3Make(10, 0, 30), rotation: SCNVector4Make(0, 0.05, 0, 0.25)),
@@ -66,6 +66,12 @@ fileprivate let cameraPositions = [
 ]
 
 func animateGearScene(camera: SCNNode) {
+    positionIndex += 1
+    
+    if positionIndex >= cameraPositions.count {
+        positionIndex = 0
+    }
+
     let duration = Constants.beatLength / 2
     
     let cameraPositionAction = SCNAction.move(to: cameraPositions[positionIndex].position, duration: duration)
@@ -83,12 +89,6 @@ func animateGearScene(camera: SCNNode) {
     let rotateAction2 = SCNAction.rotateBy(x: 0, y: 0, z: -CGFloat.pi / 4, duration: duration)
     rotateAction2.timingMode = .easeOut
     gearNode2.runAction(rotateAction2)
-    
-    positionIndex += 1
-    
-    if positionIndex >= cameraPositions.count {
-        positionIndex = 0
-    }
 }
 
 fileprivate func configureLight(_ scene: SCNScene) {
