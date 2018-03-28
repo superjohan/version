@@ -234,7 +234,12 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     
     @objc
     fileprivate func showFirstBeatState() {
-        animateGearScene(camera: self.gearCamera)
+        if self.brandPosition == 8 || self.brandPosition == 24 {
+            animateBallInGearScene()
+        } else {
+            animateGearScene(camera: self.gearCamera)
+        }
+        
         self.gearView.isHidden = false
         
         self.sceneView.isHidden = true
@@ -308,6 +313,10 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         
         if self.brandPosition % 4 > 0 {
             resetCameraToGear(camera: self.gearCamera)
+        }
+        
+        if self.brandPosition == 8 || self.brandPosition == 24 {
+            adjustGearSceneForBall(camera: self.gearCamera)
         }
     }
     

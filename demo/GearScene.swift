@@ -11,10 +11,11 @@ import SceneKit
 
 fileprivate let gearNode1 = loadModel(name: "gear", textureName: nil, color: UIColor.init(white: 0.95, alpha: 1.0))
 fileprivate let gearNode2 = loadModel(name: "gear", textureName: nil, color: UIColor.init(white: 0.95, alpha: 1.0))
+fileprivate var ballNode: SCNNode?
 
 func createGearSceneCamera() -> SCNCamera {
     let camera = SCNCamera()
-    camera.zFar = 100
+    camera.zFar = 300
     camera.vignettingIntensity = 1.0
     camera.vignettingPower = 1.0
     camera.colorFringeStrength = 3
@@ -42,6 +43,12 @@ func createGearScene(camera: SCNNode) -> SCNScene {
     gearNode2.rotation = SCNVector4Make(0, 0, Float.pi / 4, 1)
     scene.rootNode.addChildNode(gearNode2)
 
+    let ball = SCNSphere(radius: 20)
+    ball.firstMaterial?.diffuse.contents = UIColor.black
+    ballNode = SCNNode(geometry: ball)
+    ballNode?.position = SCNVector3Make(0, 0, 60)
+    scene.rootNode.addChildNode(ballNode!)
+    
     return scene
 }
 
@@ -99,6 +106,18 @@ func resetCameraToGear(camera: SCNNode) {
 func centerGearCamera(camera: SCNNode) {
     camera.position = SCNVector3Make(0, 0, 0)
     camera.rotation = SCNVector4Make(0, 0, 0, 0)
+}
+
+func adjustGearSceneForBall(camera: SCNNode) {
+    camera.position = SCNVector3Make(0, 0, 39)
+    camera.rotation = SCNVector4Make(0, 1, 0, Float.pi)
+    ballNode?.position = SCNVector3Make(0, 0, 60)
+    ballNode?.scale = SCNVector3Make(1, 1, 1)
+}
+
+func animateBallInGearScene() {
+    ballNode?.runAction(SCNAction.move(to: SCNVector3Make(0, 0, 300), duration: Constants.beatLength * 0.75))
+    ballNode?.runAction(SCNAction.scale(to: 0, duration: Constants.beatLength * 0.75))
 }
 
 fileprivate func configureLight(_ scene: SCNScene) {
