@@ -242,6 +242,10 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
             animateGearScene(camera: self.gearCamera)
         }
         
+        if self.brandPosition % 4 == 0 {
+            adjustMainSceneCamera(camera: self.mainCamera)
+        }
+        
         self.gearView.isHidden = false
         
         self.sceneView.isHidden = true
@@ -319,6 +323,11 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         
         if self.brandPosition == 8 || self.brandPosition == 24 {
             adjustGearSceneForBall(camera: self.gearCamera)
+        }
+        
+        if self.brandPosition % 4 == 0 {
+            self.mainCamera.isPaused = false
+            resetMainSceneCamera(camera: self.mainCamera)
         }
     }
     
