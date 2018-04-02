@@ -2,7 +2,7 @@
 
 ## A demo for iPhone
 
-Coming to the App Store soon.
+[Get it on the App Store!](https://itunes.apple.com/fi/app/the-jumalauta-collection/id1344164506?mt=8)
 
 Optimized for iPhone X. In fact, this is probably slow as hell on anything that's not at least an iPhone 8. Also everything likely looks entirely wrong on anything except iPhone X.
 
